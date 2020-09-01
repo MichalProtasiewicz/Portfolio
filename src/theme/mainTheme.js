@@ -10,8 +10,9 @@ export const theme = {
   backgroundColor: 'hsl(0, 0%, 11%)',
   nawbarColor: 'hsl(0, 0%, 9%)',
   black: 'hsl(0, 0%, 0%)',
+  white: 'hsl(0, 0%, 100%)',
   light: 300,
-  bold: 500,
+  bold: 700,
   fontSize: {
     xxs: '1rem',
     xs: '1.2rem',
