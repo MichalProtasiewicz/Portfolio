@@ -1,8 +1,9 @@
 import React from 'react'
+import PageTemplate from 'templates/PageTemplate';
 
 const AboutPage = () => (
-  <div>
-    <h1>AboutPage</h1>
-  </div>
+  <PageTemplate headingName="AboutPage">
+    <p>Lorem ipsum</p>
+  </PageTemplate>
 );
 export default AboutPage;

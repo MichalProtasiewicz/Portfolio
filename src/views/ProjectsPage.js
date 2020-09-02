@@ -1,8 +1,9 @@
 import React from 'react';
+import PageTemplate from 'templates/PageTemplate';
 
 const ProjectsPage = () => (
-  <div>
-    <h1>ProjectsPage</h1>
-  </div>
+  <PageTemplate headingName="ProjectsPage">
+    <p>Lorem ipsum</p>
+  </PageTemplate>
 );
 export default ProjectsPage;

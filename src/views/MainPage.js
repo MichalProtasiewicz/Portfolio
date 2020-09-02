@@ -1,11 +1,15 @@
 import React from 'react';
-import Heading from 'components/atoms/Heading/Heading';
+import PageTemplate from 'templates/PageTemplate';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 
 const MainPage = () => (
-  <div>
-    <Heading>MainPage</Heading>
+  <PageTemplate headingName='MainPage'>
+    <>
     <Paragraph>Hello my name is Michał</Paragraph>
-  </div>
+    </>
+  </PageTemplate>
 );
 export default MainPage;
+
+
+

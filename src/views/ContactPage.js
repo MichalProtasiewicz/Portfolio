@@ -1,8 +1,9 @@
 import React from 'react';
+import PageTemplate from 'templates/PageTemplate';
 
 const ContactPage = () => (
-  <div>
-    <h1>ContactPage</h1>
-  </div>
+  <PageTemplate headingName="ContactPage">
+    <p>Lorem ipsum</p>
+  </PageTemplate>
 );
 export default ContactPage;
