@@ -32,19 +32,12 @@ const HtmlCodeText = styled(CodeText)`
 `;
 
 const HeadingWrapper = styled.div`
-
 `;
 
 const H1CodeText = styled(CodeText)`
-  position: absolute;
-  top: 100px;
-  left: 40px;
 `;
 
 const CloseH1CodeText = styled(CodeText)`
-  position: absolute;
-  top: 200px;
-  left: 40px;
 `;
 
 const PageTemplate = ({ children, headingName }) => {
