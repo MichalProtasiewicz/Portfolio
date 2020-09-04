@@ -7,8 +7,9 @@ const ButtonIcon = styled.button`
   height: 35px;
   border: none;
   outline: none;
+  background:none;
 
-  &:first-child {
+  &{
     color: ${({ theme }) => theme.gray40};
     &:hover {
       color: ${({ theme }) => theme.blue};
