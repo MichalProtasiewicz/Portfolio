@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { NavLink, Link } from 'react-router-dom';
 import { routes } from 'routes';
 import logoIcon from 'assets/icons/Logo.svg';
+import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import FaceOutlinedIcon from '@material-ui/icons/FaceOutlined';
 import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
 import BusinessCenterOutlinedIcon from '@material-ui/icons/BusinessCenterOutlined';
@@ -54,9 +55,19 @@ const NavList = styled.ul`
   padding: 0px;
   display: flex;
   justify-content: center;
+  @media (min-width: 430px) {
+
+  }
 
   @media (min-width: 950px) {
     flex-direction: column;
+  }
+`;
+
+const HomeNavLink = styled(NavLink)`
+  display: none;
+  @media (min-width: 430px) {
+    display: flex;
   }
 `;
 
@@ -99,6 +110,11 @@ const Navbar = () => {
     <NavbarWrapper>
       <StyledLogoLink to={routes.home} />
       <NavList>
+        <HomeNavLink to={routes.home}>
+          <NavbarButtonIcon>
+            <HomeOutlinedIcon style={{ fontSize: 35 }} />
+          </NavbarButtonIcon>
+        </HomeNavLink>
         <NavLink to={routes.about}>
           <NavbarButtonIcon>
             <FaceOutlinedIcon style={{ fontSize: 35 }} />

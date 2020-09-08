@@ -5,40 +5,51 @@ import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
 
 const ContentWrapper = styled.div`
-  margin-top: 60px;
+  padding-top: 60px;
   position: relative;
   min-height: 100vh;
   @media (min-width: 950px) {
-    margin-top: 0px;
-    margin-left: 60px;
+    padding-top: 0px;
+    padding-left: 60px;
   }
 `;
 
 const ChildrenWrapper = styled.div`
   padding-bottom: 80px;
+  padding-left: 7%;
 `;
 
 const BodyCodeText = styled(CodeText)`
   position: absolute;
-  top: 10px;
+  top: 70px;
   left: 20px;
+  @media (min-width: 950px) {
+    top: 10px;
+    left: 80px;
+  }
 `;
 
 const CloseBodyCodeText = styled(CodeText)`
   position: absolute;
   bottom: 35px;
   left: 20px;
+  @media (min-width: 950px) {
+    left: 80px;
+  }
 `;
 
 const HtmlCodeText = styled(CodeText)`
   position: absolute;
   bottom: 10px;
   left: 5px;
+  @media (min-width: 950px) {
+    left: 65px;
+  }
 `;
 
 const HeadingWrapper = styled.div`
-  padding-top: 220px;
-  padding-left: 40px;
+  padding-top: 13%;
+  padding-left: 5%;
 `;
 
 const H1CodeText = styled(CodeText)`

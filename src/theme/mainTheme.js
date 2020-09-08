@@ -7,6 +7,7 @@ export const theme = {
   dirtyWhite: 'hsl(156, 100%, 99%)',
   gray40: 'hsl(0, 0%, 40%)',
   gray30: 'hsl(0, 0%, 30%)',
+  gray25: 'hsl(0, 0%, 25%)',
   backgroundColor: 'hsl(0, 0%, 11%)',
   nawbarColor: 'hsl(0, 0%, 9%)',
   black: 'hsl(0, 0%, 0%)',
