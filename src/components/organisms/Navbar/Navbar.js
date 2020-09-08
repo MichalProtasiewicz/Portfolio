@@ -18,12 +18,23 @@ const NavbarWrapper = styled.div`
   position: fixed;
   right: 0;
   top: 0;
-  padding: 25px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-rows: 60px;
+  grid-template-columns: 60px 1fr;
   background-color: ${({ theme }) => theme.nawbarColor};
   z-index: 1;
+
+  @media (min-width: 530px) {
+    grid-template-columns: 60px 1fr 120px;
+  }
+
+  @media (min-width: 950px) {
+    width: 60px;
+    height: 100vh;
+    left:0;
+    grid-template-columns: 60px;
+    grid-template-rows: 60px 1fr 120px;
+  }
 `;
 
 const StyledLogoLink = styled(NavLink)`
@@ -39,22 +50,48 @@ const StyledLogoLink = styled(NavLink)`
 
 const NavList = styled.ul`
   list-style: none;
-  margin: 0px;
+  margin: 0;
   padding: 0px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+
+  @media (min-width: 950px) {
+    flex-direction: column;
+  }
 `;
 
 const SocialList = styled.ul`
   list-style: none;
   margin: 0px;
   padding: 0px;
-  display: flex;
-  justify-content: space-between;
+  display: none;
+  justify-content: center;
+  @media (min-width: 530px) {
+    display: flex;
+  }
+  @media (min-width: 950px) {
+    flex-direction: column;
+  }
 `;
 
-const StyledButtonIcon = styled(ButtonIcon)`
-  margin: 0 10px 0 10px;
+const NavbarButtonIcon = styled(ButtonIcon)`
+  height: 60px;
+  margin: 0 15px 0 15px;
+
+
+  @media (min-width: 950px) {
+    height: 35px;
+    margin: 15px 0 15px 12px;
+  }
+`;
+const SocialButtonIcon = styled(ButtonIcon)`
+  height: 60px;
+  margin: 0 5px 0 5px;
+
+  @media (min-width: 950px) {
+    height: 25px;
+    margin: 5px 0 5px 17px;
+  }
 `;
 
 const Navbar = () => {
@@ -63,41 +100,41 @@ const Navbar = () => {
       <StyledLogoLink to={routes.home} />
       <NavList>
         <NavLink to={routes.about}>
-          <StyledButtonIcon>
+          <NavbarButtonIcon>
             <FaceOutlinedIcon style={{ fontSize: 35 }} />
-          </StyledButtonIcon>
+          </NavbarButtonIcon>
         </NavLink>
         <NavLink to={routes.skills}>
-          <StyledButtonIcon>
+          <NavbarButtonIcon>
             <SchoolOutlinedIcon style={{ fontSize: 35 }} />
-          </StyledButtonIcon>
+          </NavbarButtonIcon>
         </NavLink>
         <NavLink to={routes.projects}>
-          <StyledButtonIcon>
+          <NavbarButtonIcon>
             <BusinessCenterOutlinedIcon style={{ fontSize: 35 }} />
-          </StyledButtonIcon>
+          </NavbarButtonIcon>
         </NavLink>
         <NavLink to={routes.contact}>
-          <StyledButtonIcon>
+          <NavbarButtonIcon>
             <EmailOutlinedIcon style={{ fontSize: 35 }} />
-          </StyledButtonIcon>
+          </NavbarButtonIcon>
         </NavLink>
       </NavList>
       <SocialList>
+        <Link to={routes.linkedin}>
+          <SocialButtonIcon small>
+            <LinkedInIcon style={{ fontSize: 25 }} />
+          </SocialButtonIcon>
+        </Link>
         <Link to={routes.github}>
-          <StyledButtonIcon small>
+          <SocialButtonIcon small>
             <GitHubIcon style={{ fontSize: 25 }} />
-          </StyledButtonIcon>
+          </SocialButtonIcon>
         </Link>
         <Link to={routes.telegram}>
-          <StyledButtonIcon small>
+          <SocialButtonIcon small>
             <TelegramIcon style={{ fontSize: 25 }} />
-          </StyledButtonIcon>
-        </Link>
-        <Link to={routes.linkedin}>
-          <StyledButtonIcon small>
-            <LinkedInIcon style={{ fontSize: 25 }} />
-          </StyledButtonIcon>
+          </SocialButtonIcon>
         </Link>
       </SocialList>
     </NavbarWrapper>

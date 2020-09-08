@@ -5,9 +5,13 @@ import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
 
 const ContentWrapper = styled.div`
-  padding-top: 60px;
+  margin-top: 60px;
   position: relative;
   min-height: 100vh;
+  @media (min-width: 950px) {
+    margin-top: 0px;
+    margin-left: 60px;
+  }
 `;
 
 const ChildrenWrapper = styled.div`
@@ -16,29 +20,35 @@ const ChildrenWrapper = styled.div`
 
 const BodyCodeText = styled(CodeText)`
   position: absolute;
-  top: 60px;
-  left: 30px;
+  top: 10px;
+  left: 20px;
 `;
 
 const CloseBodyCodeText = styled(CodeText)`
   position: absolute;
   bottom: 35px;
-  left: 30px;
+  left: 20px;
 `;
 
 const HtmlCodeText = styled(CodeText)`
   position: absolute;
   bottom: 10px;
-  left: 15px;
+  left: 5px;
 `;
 
 const HeadingWrapper = styled.div`
+  padding-top: 220px;
+  padding-left: 40px;
 `;
 
 const H1CodeText = styled(CodeText)`
 `;
 
 const CloseH1CodeText = styled(CodeText)`
+`;
+
+const StyledHeading = styled(Heading)`
+  padding-left: 10px;
 `;
 
 const PageTemplate = ({ children, headingName }) => {
@@ -49,7 +59,7 @@ const PageTemplate = ({ children, headingName }) => {
       <HtmlCodeText>&lt;/html&gt;</HtmlCodeText>
       <HeadingWrapper>
         <H1CodeText>&lt;h1&gt;</H1CodeText>
-        <Heading>{headingName}</Heading>
+        <StyledHeading>{headingName}</StyledHeading>
         <CloseH1CodeText>&lt;/h1&gt;</CloseH1CodeText>
       </HeadingWrapper>
       <ChildrenWrapper>{children}</ChildrenWrapper>
