@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import { routes } from 'routes';
 import logoIcon from 'assets/icons/Logo.svg';
 import FaceOutlinedIcon from '@material-ui/icons/FaceOutlined';
@@ -62,29 +62,43 @@ const Navbar = () => {
     <NavbarWrapper>
       <StyledLogoLink to={routes.home} />
       <NavList>
-        <StyledButtonIcon>
-          <FaceOutlinedIcon style={{ fontSize: 35 }} />
-        </StyledButtonIcon>
-        <StyledButtonIcon>
-          <SchoolOutlinedIcon style={{ fontSize: 35 }} />
-        </StyledButtonIcon>
-        <StyledButtonIcon>
-          <BusinessCenterOutlinedIcon style={{ fontSize: 35 }} />
-        </StyledButtonIcon>
-        <StyledButtonIcon>
-          <EmailOutlinedIcon style={{ fontSize: 35 }} />
-        </StyledButtonIcon>
+        <NavLink to={routes.about}>
+          <StyledButtonIcon>
+            <FaceOutlinedIcon style={{ fontSize: 35 }} />
+          </StyledButtonIcon>
+        </NavLink>
+        <NavLink to={routes.skills}>
+          <StyledButtonIcon>
+            <SchoolOutlinedIcon style={{ fontSize: 35 }} />
+          </StyledButtonIcon>
+        </NavLink>
+        <NavLink to={routes.projects}>
+          <StyledButtonIcon>
+            <BusinessCenterOutlinedIcon style={{ fontSize: 35 }} />
+          </StyledButtonIcon>
+        </NavLink>
+        <NavLink to={routes.contact}>
+          <StyledButtonIcon>
+            <EmailOutlinedIcon style={{ fontSize: 35 }} />
+          </StyledButtonIcon>
+        </NavLink>
       </NavList>
       <SocialList>
-        <StyledButtonIcon small>
-          <GitHubIcon style={{ fontSize: 25 }} />
-        </StyledButtonIcon>
-        <StyledButtonIcon small>
-          <TelegramIcon style={{ fontSize: 25 }} />
-        </StyledButtonIcon>
-        <StyledButtonIcon small>
-          <LinkedInIcon style={{ fontSize: 25 }} />
-        </StyledButtonIcon>
+        <Link to={routes.github}>
+          <StyledButtonIcon small>
+            <GitHubIcon style={{ fontSize: 25 }} />
+          </StyledButtonIcon>
+        </Link>
+        <Link to={routes.telegram}>
+          <StyledButtonIcon small>
+            <TelegramIcon style={{ fontSize: 25 }} />
+          </StyledButtonIcon>
+        </Link>
+        <Link to={routes.linkedin}>
+          <StyledButtonIcon small>
+            <LinkedInIcon style={{ fontSize: 25 }} />
+          </StyledButtonIcon>
+        </Link>
       </SocialList>
     </NavbarWrapper>
   );

@@ -5,6 +5,7 @@ import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
 
 const ContentWrapper = styled.div`
+  padding-top: 60px;
   position: relative;
   min-height: 100vh;
 `;
@@ -15,7 +16,7 @@ const ChildrenWrapper = styled.div`
 
 const BodyCodeText = styled(CodeText)`
   position: absolute;
-  top: 30px;
+  top: 60px;
   left: 30px;
 `;
 

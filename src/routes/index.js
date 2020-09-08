@@ -4,4 +4,7 @@ export const routes = {
   skills: '/skills',
   projects: '/projects',
   contact: '/contact',
+  github: 'https://github.com/MichalProtasiewicz',
+  linkedin: 'https://www.linkedin.com/in/micha%C5%82-protasiewicz-28785518b/',
+  telegram: 'https://t.me/prota_michal',
 };
