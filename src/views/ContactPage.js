@@ -65,9 +65,9 @@ const ContactPage = () => (
   <PageTemplate headingName="Contact me">
     <>
       <StyledParagraph>
-        You can find me in many places.
-        <StyledLink to={routes.github}>Github</StyledLink>,
-        <StyledLink to={routes.linkedin}>Linkedin</StyledLink>,
+        You can find me in many places.&nbsp;
+        <StyledLink to={routes.github}>Github</StyledLink>,&nbsp;
+        <StyledLink to={routes.linkedin}>Linkedin</StyledLink>,&nbsp;
         <StyledLink to={routes.telegram}>Telegram</StyledLink>. <br />
         I am interested in all kind of employment, expecially permament. <br />
         However, if u have other request or question, don’t hestitate to contact me using below form
@@ -81,7 +81,7 @@ const ContactPage = () => (
             <Input>Subject</Input>
           </SubjectInputWrapper>
           <MessageInputWrapper>
-            <Input as="textarea" style={{ resize: 'vertical', minHeight: '75px' }}>
+            <Input as="textarea" style={{ resize: 'vertical', minHeight: '125px' }}>
               Message
             </Input>
           </MessageInputWrapper>
