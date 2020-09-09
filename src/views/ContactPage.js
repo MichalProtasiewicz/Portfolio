@@ -5,6 +5,7 @@ import { routes } from 'routes';
 import PageTemplate from 'templates/PageTemplate';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Input from 'components/atoms/Input/Input';
+import Button from 'components/atoms/Button/Button';
 
 const StyledParagraph = styled(Paragraph)`
   width: 95%;
@@ -17,9 +18,13 @@ const StyledLink = styled(Link)`
 `;
 
 const ContactFormWrapper = styled.form`
+  position: relative;
   width: 90%;
   max-width: 550px;
   padding-top: 20px;
+`;
+
+const InputsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 50px 50px 1fr;
@@ -50,6 +55,12 @@ const MessageInputWrapper = styled.div`
   }
 `;
 
+const StyledButton = styled(Button)`
+  position: absolute;
+  right: 15px;
+  bottom: -60px;
+`;
+
 const ContactPage = () => (
   <PageTemplate headingName="Contact me">
     <>
@@ -63,14 +74,19 @@ const ContactPage = () => (
         either.
       </StyledParagraph>
       <ContactFormWrapper>
-        <Input>Name</Input>
-        <Input>Email</Input>
-        <SubjectInputWrapper>
-          <Input>Subject</Input>
-        </SubjectInputWrapper>
-        <MessageInputWrapper>
-          <Input as="textarea" style={{resize: "vertical", minHeight: "75px"}}>Message</Input>
-        </MessageInputWrapper>
+        <InputsWrapper>
+          <Input>Name</Input>
+          <Input>Email</Input>
+          <SubjectInputWrapper>
+            <Input>Subject</Input>
+          </SubjectInputWrapper>
+          <MessageInputWrapper>
+            <Input as="textarea" style={{ resize: 'vertical', minHeight: '75px' }}>
+              Message
+            </Input>
+          </MessageInputWrapper>
+        </InputsWrapper>
+        <StyledButton type="submit">Send</StyledButton>
       </ContactFormWrapper>
     </>
   </PageTemplate>

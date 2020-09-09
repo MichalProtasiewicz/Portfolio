@@ -17,6 +17,9 @@ const ContentWrapper = styled.div`
 const ChildrenWrapper = styled.div`
   padding-bottom: 80px;
   padding-left: 7%;
+  @media (min-width: 1100px) {
+    padding-left: 70px;
+  }
 `;
 
 const BodyCodeText = styled(CodeText)`
@@ -50,6 +53,10 @@ const HtmlCodeText = styled(CodeText)`
 const HeadingWrapper = styled.div`
   padding-top: 13%;
   padding-left: 5%;
+  @media (min-width: 1100px) {
+    padding-top: 135px;
+    padding-left: 50px;
+  }
 `;
 
 const H1CodeText = styled(CodeText)`
