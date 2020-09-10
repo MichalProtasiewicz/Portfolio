@@ -44,7 +44,7 @@ const StyledLogoLink = styled(NavLink)`
   background-image: url(${logoIcon});
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 90%;
+  background-size: 75%;
   border: none;
 `;
 

@@ -42,17 +42,15 @@ const HtmlCodeText = styled(CodeText)`
 `;
 
 const ChildrenWrapper = styled.div`
-  padding-top: 13%;
-  padding-left: 7%;
-  padding-right: 7%;
+  position: relative;
+  padding: 13% 7% 15% 7%;
+
   @media (min-width: 750px) {
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 13% 10% 15% 10%;
   }
   @media (min-width: 950px) {
-    padding-top: 135px;
-    padding-left: 90px;
-    padding-right: 90px;
+    padding: 135px 90px 135px 90px;
+
   }
 `;
 

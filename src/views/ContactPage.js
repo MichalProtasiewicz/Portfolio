@@ -68,7 +68,7 @@ const StyledButton = styled(Button)`
 `;
 
 const ContactPage = () => (
-  <PageTemplate headingName="Contact me">
+  <PageTemplate>
     <>
       <>
         <CodeText>&lt;h1&gt;</CodeText>

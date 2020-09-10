@@ -2,10 +2,13 @@ import styled from 'styled-components';
 
 const Heading = styled.h1`
   margin: 0;
-  font-size: ${({ theme }) => theme.fontSize.l};
+  font-size: ${({ theme }) => theme.fontSize.xm};
   font-weight: ${({ theme }) => theme.light};
   color: ${({ theme }) => theme.blue};
-  @media (min-width: 530px) {
+  @media (min-width: 460px) {
+    font-size: ${({ theme }) => theme.fontSize.l};
+  }
+  @media (min-width: 540px) {
     font-size: ${({ theme }) => theme.fontSize.xl};
   }
   @media (min-width: 750px) {
