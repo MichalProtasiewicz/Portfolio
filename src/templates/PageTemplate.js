@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import CodeText from 'components/atoms/CodeText/CodeText';
-import Heading from 'components/atoms/Heading/Heading';
 
 const ContentWrapper = styled.div`
   padding-top: 60px;
@@ -11,14 +10,6 @@ const ContentWrapper = styled.div`
   @media (min-width: 950px) {
     padding-top: 0px;
     padding-left: 60px;
-  }
-`;
-
-const ChildrenWrapper = styled.div`
-  padding-bottom: 80px;
-  padding-left: 7%;
-  @media (min-width: 1100px) {
-    padding-left: 70px;
   }
 `;
 
@@ -50,48 +41,34 @@ const HtmlCodeText = styled(CodeText)`
   }
 `;
 
-const HeadingWrapper = styled.div`
+const ChildrenWrapper = styled.div`
   padding-top: 13%;
-  padding-left: 5%;
-  @media (min-width: 1100px) {
+  padding-left: 7%;
+  padding-right: 7%;
+  @media (min-width: 750px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  @media (min-width: 950px) {
     padding-top: 135px;
-    padding-left: 50px;
+    padding-left: 90px;
+    padding-right: 90px;
   }
 `;
 
-const H1CodeText = styled(CodeText)`
-`;
-
-const CloseH1CodeText = styled(CodeText)`
-`;
-
-const StyledHeading = styled(Heading)`
-  padding-left: 10px;
-`;
-
-const PageTemplate = ({ children, headingName }) => {
+const PagesTemplate = ({ children }) => {
   return (
     <ContentWrapper>
       <BodyCodeText>&lt;body&gt;</BodyCodeText>
       <CloseBodyCodeText>&lt;/body&gt;</CloseBodyCodeText>
       <HtmlCodeText>&lt;/html&gt;</HtmlCodeText>
-      <HeadingWrapper>
-        <H1CodeText>&lt;h1&gt;</H1CodeText>
-        <StyledHeading>{headingName}</StyledHeading>
-        <CloseH1CodeText>&lt;/h1&gt;</CloseH1CodeText>
-      </HeadingWrapper>
       <ChildrenWrapper>{children}</ChildrenWrapper>
     </ContentWrapper>
   );
 };
 
-PageTemplate.propTypes = {
+PagesTemplate.propTypes = {
   children: PropTypes.element.isRequired,
-  headingName: PropTypes.string,
 };
 
-PageTemplate.defaultProps = {
-  headingName: '',
-};
-
-export default PageTemplate;
+export default PagesTemplate;

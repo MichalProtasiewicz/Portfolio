@@ -11,7 +11,7 @@ const Heading = styled.h1`
   @media (min-width: 750px) {
     font-size: ${({ theme }) => theme.fontSize.xxl};
   }
-  @media (min-width: 1025px) {
+  @media (min-width: 950px) {
     font-size: ${({ theme }) => theme.fontSize.xxxl};
   }
 `;

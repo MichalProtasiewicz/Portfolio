@@ -3,9 +3,15 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { routes } from 'routes';
 import PageTemplate from 'templates/PageTemplate';
+import CodeText from 'components/atoms/CodeText/CodeText';
+import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Input from 'components/atoms/Input/Input';
 import Button from 'components/atoms/Button/Button';
+
+const StyledHeading = styled(Heading)`
+  padding-left: 10px;
+`;
 
 const StyledParagraph = styled(Paragraph)`
   width: 95%;
@@ -19,7 +25,7 @@ const StyledLink = styled(Link)`
 
 const ContactFormWrapper = styled.form`
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 550px;
   padding-top: 20px;
 `;
@@ -64,6 +70,11 @@ const StyledButton = styled(Button)`
 const ContactPage = () => (
   <PageTemplate headingName="Contact me">
     <>
+      <>
+        <CodeText>&lt;h1&gt;</CodeText>
+        <StyledHeading>About me</StyledHeading>
+        <CodeText>&lt;/h1&gt;</CodeText>
+      </>
       <StyledParagraph>
         You can find me in many places.&nbsp;
         <StyledLink to={routes.github}>Github</StyledLink>,&nbsp;

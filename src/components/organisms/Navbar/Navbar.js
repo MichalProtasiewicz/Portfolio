@@ -28,11 +28,10 @@ const NavbarWrapper = styled.div`
   @media (min-width: 530px) {
     grid-template-columns: 60px 1fr 120px;
   }
-
   @media (min-width: 950px) {
     width: 60px;
     height: 100vh;
-    left:0;
+    left: 0;
     grid-template-columns: 60px;
     grid-template-rows: 60px 1fr 120px;
   }
@@ -55,9 +54,6 @@ const NavList = styled.ul`
   padding: 0px;
   display: flex;
   justify-content: center;
-  @media (min-width: 430px) {
-
-  }
 
   @media (min-width: 950px) {
     flex-direction: column;
@@ -66,7 +62,8 @@ const NavList = styled.ul`
 
 const HomeNavLink = styled(NavLink)`
   display: none;
-  @media (min-width: 430px) {
+
+  @media (min-width: 380px) {
     display: flex;
   }
 `;
@@ -77,6 +74,7 @@ const SocialList = styled.ul`
   padding: 0px;
   display: none;
   justify-content: center;
+
   @media (min-width: 530px) {
     display: flex;
   }
@@ -88,7 +86,6 @@ const SocialList = styled.ul`
 const NavbarButtonIcon = styled(ButtonIcon)`
   height: 60px;
   margin: 0 15px 0 15px;
-
 
   @media (min-width: 950px) {
     height: 35px;
