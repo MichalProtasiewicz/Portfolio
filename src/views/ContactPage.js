@@ -9,6 +9,9 @@ import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Input from 'components/atoms/Input/Input';
 import Button from 'components/atoms/Button/Button';
 
+
+const HeadingWrapper = styled.div``;
+
 const StyledHeading = styled(Heading)`
   padding-left: 10px;
 `;
@@ -69,12 +72,11 @@ const StyledButton = styled(Button)`
 
 const ContactPage = () => (
   <PageTemplate>
-    <>
-      <>
+      <HeadingWrapper>
         <CodeText>&lt;h1&gt;</CodeText>
-        <StyledHeading>About me</StyledHeading>
+        <StyledHeading>Contact me</StyledHeading>
         <CodeText>&lt;/h1&gt;</CodeText>
-      </>
+      </HeadingWrapper>
       <StyledParagraph>
         You can find me in many places.&nbsp;
         <StyledLink to={routes.github}>Github</StyledLink>,&nbsp;
@@ -99,7 +101,6 @@ const ContactPage = () => (
         </InputsWrapper>
         <StyledButton type="submit">Send</StyledButton>
       </ContactFormWrapper>
-    </>
   </PageTemplate>
 );
 export default ContactPage;

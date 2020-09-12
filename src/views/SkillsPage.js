@@ -4,6 +4,7 @@ import PageTemplate from 'templates/PageTemplate';
 import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
 
+
 const StyledHeading = styled(Heading)`
   padding-left: 10px;
 `;

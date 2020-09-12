@@ -4,7 +4,7 @@ import logoIcon from 'assets/icons/Logo.svg';
 const Logo = styled.svg`
   position: fixed;
   margin: 0px;
-  top: 100px;
+  top: 125px;
   right: 25px;
   width: 200px;
   height: 200px;
@@ -23,6 +23,7 @@ const Logo = styled.svg`
     height: 275px;
   }
   @media (min-width: 750px) {
+    top: 100px;
     width: 300px;
     height: 300px;
   }
