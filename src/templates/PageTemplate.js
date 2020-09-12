@@ -14,11 +14,15 @@ const ContentWrapper = styled.div`
 `;
 
 const ChildrenWrapper = styled.div`
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 13% 7% 15% 7%;
+  width: 100vw;
+  height: -moz-calc(100vh - 60px);
+  height: -webkit-calc(100vh - 60px);
+  height: -o-calc(100vh - 60px);
+  height: calc(100vh - 60px);
 
   @media (min-width: 750px) {
     padding: 13% 10% 15% 10%;
@@ -26,25 +30,11 @@ const ChildrenWrapper = styled.div`
   @media (min-width: 950px) {
     padding: 135px 90px 135px 90px;
   }
-
-  width: 100vw;
-  /* Firefox */
-  height: -moz-calc(100vh - 60px);
-  /* WebKit */
-  height: -webkit-calc(100vh - 60px);
-  /* Opera */
-  height: -o-calc(100vh - 60px);
-  /* Standard */
-  height: calc(100vh - 60px);
   @media (min-width: 950px) {
     height: 100vh;
-    /* Firefox */
     width: -moz-calc(100vw - 60px);
-    /* WebKit */
     width: -webkit-calc(100vw - 60px);
-    /* Opera */
     width: -o-calc(100vw - 60px);
-    /* Standard */
     width: calc(100vw - 60px);
   }
 `;
