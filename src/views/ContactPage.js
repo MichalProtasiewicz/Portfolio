@@ -28,6 +28,8 @@ const StyledLink = styled(Link)`
 
 const ContactFormWrapper = styled.form`
   position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   max-width: 550px;
   padding-top: 20px;
@@ -65,9 +67,9 @@ const MessageInputWrapper = styled.div`
 `;
 
 const StyledButton = styled(Button)`
-  position: absolute;
-  right: 15px;
-  bottom: -60px;
+  margin-top: 20px;
+  margin-right: 20px;
+  align-self: flex-end;
 `;
 
 const ContactPage = () => (

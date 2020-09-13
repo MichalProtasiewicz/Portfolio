@@ -22,12 +22,14 @@ const PageWrapper = styled.div`
 `;
 
 const StyledLogo = styled(Logo)`
+  margin-bottom: 100px;
   grid-column: 2;
   justify-self: center;
   align-self: center;
   @media (min-width: 900px) {
     width: 125%;
     height: 125%;
+    margin-bottom: 0px;
   }
   @media (min-width: 1050px) {
     width: 150%;

@@ -14,11 +14,10 @@ const ContentWrapper = styled.div`
 `;
 
 const ChildrenWrapper = styled.div`
-  position: block;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 13% 7% 15% 7%;
+  padding: 13% 7% 13% 7%;
   width: 100vw;
   min-height: -moz-calc(100vh - 60px);
   min-height: -webkit-calc(100vh - 60px);
@@ -30,10 +29,10 @@ const ChildrenWrapper = styled.div`
   height: calc(100% - 60px);
 
   @media (min-width: 750px) {
-    padding: 13% 10% 15% 10%;
+    padding: 12% 10% 12% 10%;
   }
   @media (min-width: 950px) {
-    padding: 135px 90px 135px 90px;
+    padding: 125px 90px 125px 90px;
   }
   @media (min-width: 950px) {
     height: 100%;
