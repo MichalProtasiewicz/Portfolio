@@ -14,15 +14,20 @@ const ContentWrapper = styled.div`
 `;
 
 const ChildrenWrapper = styled.div`
+  position: block;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 13% 7% 15% 7%;
   width: 100vw;
-  height: -moz-calc(100vh - 60px);
-  height: -webkit-calc(100vh - 60px);
-  height: -o-calc(100vh - 60px);
-  height: calc(100vh - 60px);
+  min-height: -moz-calc(100vh - 60px);
+  min-height: -webkit-calc(100vh - 60px);
+  min-height: -o-calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+  height: -moz-calc(100% - 60px);
+  height: -webkit-calc(100% - 60px);
+  height: -o-calc(100% - 60px);
+  height: calc(100% - 60px);
 
   @media (min-width: 750px) {
     padding: 13% 10% 15% 10%;
@@ -31,7 +36,7 @@ const ChildrenWrapper = styled.div`
     padding: 135px 90px 135px 90px;
   }
   @media (min-width: 950px) {
-    height: 100vh;
+    height: 100%;
     width: -moz-calc(100vw - 60px);
     width: -webkit-calc(100vw - 60px);
     width: -o-calc(100vw - 60px);
