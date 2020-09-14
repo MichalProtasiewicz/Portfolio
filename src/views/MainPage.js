@@ -1,20 +1,37 @@
 import React from 'react';
 import styled from 'styled-components';
-import PageTemplate from 'templates/PageTemplate';
 import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
 import Logo from 'components/molecules/Logo/Logo';
 
 const PageWrapper = styled.div`
-  width: 100%;
-  height: 100%;
+  padding: 13% 7% 13% 7%;
+  width: 100vw;
+  min-height: -moz-calc(100vh - 60px);
+  min-height: -webkit-calc(100vh - 60px);
+  min-height: -o-calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  @media (min-width: 750px) {
+    padding: 12% 10% 12% 10%;
+  }
+  @media (min-width: 950px) {
+    height: 100%;
+    padding: 125px 90px 125px 90px;
+    width: -moz-calc(100vw - 60px);
+    width: -webkit-calc(100vw - 60px);
+    width: -o-calc(100vw - 60px);
+    width: calc(100vw - 60px);
+  }
   @media (min-width: 1250px) {
-    column-gap: 20px;
+    column-gap: 40px;
     grid-template-columns: 0.75fr 0.25fr;
     grid-template-rows: 1fr;
+  }
+  @media (min-width: 1300px) {
+    grid-template-columns: 0.7fr 0.3fr;
   }
   @media (min-width: 1410px) {
     grid-template-columns: 0.6fr 0.4fr;
@@ -66,20 +83,17 @@ const StyledSpan = styled.span`
   color: ${({ theme }) => theme.blue};
 `;
 
-
 const MainPage = () => (
-  <PageTemplate>
-    <PageWrapper>
-      <StyledLogo />
-      <HeaderWrapping>
-        <CodeText>&lt;h1&gt;</CodeText>
-        <StyledHeading>
-          Hello,
-          <br /> I&apos;m <StyledSpan>Michał</StyledSpan>,<br /> frontend developer.
-        </StyledHeading>
-        <CodeText>&lt;/h1&gt;</CodeText>
-      </HeaderWrapping>
-    </PageWrapper>
-  </PageTemplate>
+  <PageWrapper>
+    <StyledLogo />
+    <HeaderWrapping>
+      <CodeText>&lt;h1&gt;</CodeText>
+      <StyledHeading>
+        Hello,
+        <br /> I&apos;m <StyledSpan>Michał</StyledSpan>,<br /> frontend developer.
+      </StyledHeading>
+      <CodeText>&lt;/h1&gt;</CodeText>
+    </HeaderWrapping>
+  </PageWrapper>
 );
 export default MainPage;
