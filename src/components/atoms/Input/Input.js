@@ -33,7 +33,7 @@ const InputLabel = styled.label`
     top: -11px;
     left: 10px;
     background-color: ${({ theme }) => theme.gray20};
-    color: ${({ theme }) => theme.lightBlue};
+    color: ${({ theme }) => theme.blue};
   }
   ${StyledInput}:valid~ & {
     top: -11px;
