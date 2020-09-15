@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const SocialButton = styled.button`
-  color: ${({ theme }) => theme.gray40};
+  color: ${({ theme }) => theme.gray50};
   position: relative;
   display: block;
   padding: 0;
@@ -10,7 +10,7 @@ const SocialButton = styled.button`
   margin: 0 50px;
   border: none;
   outline: none;
-  background: ${({ theme }) => theme.dirtyWhite};
+  background: ${({ theme }) => theme.gray20};
   transform: rotate(-25deg) skew(25deg) translate(0, 0);
   transition: 0.5s;
   box-shadow: -20px 20px 10px rgba(0, 0, 0, 0.5);
@@ -22,7 +22,7 @@ const SocialButton = styled.button`
     left: -20px;
     height: 100%;
     width: 20px;
-    background: #b1b1b1;
+    background: #252525;
     transition: 0.5s;
     transform: rotate(0deg) skewY(-45deg);
   }
@@ -33,7 +33,7 @@ const SocialButton = styled.button`
     left: -10px;
     height: 20px;
     width: 100%;
-    background: #b1b1b1;
+    background: #292929;
     transition: 0.5s;
     transform: rotate(0deg) skewX(-45deg);
   }
@@ -41,51 +41,49 @@ const SocialButton = styled.button`
     color: #fff;
     transform: rotate(-25deg) skew(25deg) translate(20px, -20px);
     box-shadow: -50px 50px 50px rgba(0, 0, 0, 0.5);
+
     ${({ email }) =>
       email &&
       css`
-        background: #db4437;
+        background: #d44638;
         &:before {
-          background: #e8483a;
+          background: #a9362b;
         }
         &:after {
-          background: #f54c3d;
+          background: #c13d30;
         }
       `}
-
     ${({ github }) =>
       github &&
       css`
-        background: #000;
+        background: #151515;
         &:before {
-          background: #191919;
+          background: #101010;
         }
         &:after {
-          background: #2f2f2f;
+          background: #121212;
         }
       `}
-
   ${({ telegram }) =>
       telegram &&
       css`
         background: #0088cc;
         &:before {
-          background: #009be8;
+          background: #045d8a;
         }
         &:after {
-          background: #00a5f7;
+          background: #046a9c;
         }
       `}
-
   ${({ linkedin }) =>
       linkedin &&
       css`
-        background: #007bb5;
+        background: #0072b1;
         &:before {
-          background: #0186c5;
+          background: #035380;
         }
         &:after {
-          background: #038fd2;
+          background: #005d90;
         }
       `}
   }

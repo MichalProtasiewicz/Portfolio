@@ -7,7 +7,7 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const SocialButtonsWrapper = styled.div`
-  display: none;
+  display: flex;
   height: 100%;
   width: -moz-calc(100vw - 860px);
   width: -webkit-calc(100vw - 860px);
