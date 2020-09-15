@@ -48,15 +48,12 @@ const StyledLogo = styled(Logo)`
     height: 125%;
     margin-bottom: 0px;
   }
-  @media (min-width: 1050px) {
-    width: 150%;
-    height: 150%;
-  }
+
   @media (min-width: 1250px) {
     grid-row: 1;
     grid-column: 2;
-    width: 100%;
-    height: 100%;
+    width: 90%;
+    height: 90%;
   }
 `;
 

@@ -8,7 +8,15 @@ import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Input from 'components/atoms/Input/Input';
 import Button from 'components/atoms/Button/Button';
+import SocialButtons from 'components/molecules/SocialButtons/SocialButtons'
 
+const PageWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+`;
 
 const HeadingWrapper = styled.div``;
 
@@ -31,7 +39,7 @@ const ContactFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 550px;
+  max-width: 760px;
   padding-top: 20px;
 `;
 
@@ -39,8 +47,8 @@ const InputsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 50px 50px 1fr;
-  grid-row-gap: 15px;
-  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
 
   @media (min-width: 530px) {
     grid-template-columns: 1fr 1fr;
@@ -67,13 +75,14 @@ const MessageInputWrapper = styled.div`
 `;
 
 const StyledButton = styled(Button)`
-  margin-top: 20px;
+  margin-top: 10px;
   margin-right: 20px;
   align-self: flex-end;
 `;
 
 const ContactPage = () => (
   <PageTemplate>
+    <PageWrapper>
       <HeadingWrapper>
         <CodeText>&lt;h1&gt;</CodeText>
         <StyledHeading>Contact me</StyledHeading>
@@ -103,6 +112,8 @@ const ContactPage = () => (
         </InputsWrapper>
         <StyledButton type="submit">Send</StyledButton>
       </ContactFormWrapper>
+      </PageWrapper>
+      <SocialButtons/>
   </PageTemplate>
 );
 export default ContactPage;

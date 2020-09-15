@@ -30,6 +30,10 @@ const ChildrenWrapper = styled.div`
     width: -o-calc(100vw - 60px);
     width: calc(100vw - 60px);
   }
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    justify-content: left;
+  }
 `;
 
 const PagesTemplate = ({ children }) => {
