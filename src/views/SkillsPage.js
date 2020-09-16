@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import PageTemplate from 'templates/PageTemplate';
 import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
+import HoneyComb from 'components/organisms/HoneyComb/HoneyComb';
 
 const PageWrapper = styled.div`
   display: flex;
@@ -23,6 +24,7 @@ const SkillsPage = () => (
       <StyledHeading>My skills</StyledHeading>
       <CodeText>&lt;/h1&gt;</CodeText>
     </PageWrapper>
+    <HoneyComb />
   </PageTemplate>
 );
 

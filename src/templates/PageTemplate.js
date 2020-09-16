@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const ChildrenWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
   padding: 13% 7% 13% 7%;
   width: 100vw;
   min-height: -moz-calc(100vh - 60px);
@@ -24,6 +24,7 @@ const ChildrenWrapper = styled.div`
     padding: 125px 90px 125px 90px;
   }
   @media (min-width: 950px) {
+    justify-content: center;
     height: 100%;
     width: -moz-calc(100vw - 60px);
     width: -webkit-calc(100vw - 60px);
@@ -33,6 +34,7 @@ const ChildrenWrapper = styled.div`
   @media (min-width: 1200px) {
     flex-direction: row;
     justify-content: left;
+    align-items: center;
   }
 `;
 

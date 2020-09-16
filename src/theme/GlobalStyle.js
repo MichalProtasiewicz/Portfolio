@@ -10,6 +10,7 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%;
+    line-height: 1.3;
   }
 
   body {
