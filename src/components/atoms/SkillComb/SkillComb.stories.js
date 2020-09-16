@@ -9,21 +9,21 @@ import SkillComb from './SkillComb';
 storiesOf('Atoms/SkillComb', module)
   .add('Email', () => (
     <SkillComb>
-      <EmailOutlinedIcon style={{ fontSize: 50 }} />
+      <EmailOutlinedIcon style={{ fontSize: 30 }} />
     </SkillComb>
   ))
   .add('Github', () => (
     <SkillComb>
-      <GitHubIcon style={{ fontSize: 50 }} />
+      <GitHubIcon style={{ fontSize: 30 }} />
     </SkillComb>
   ))
   .add('Telegram', () => (
     <SkillComb>
-      <TelegramIcon style={{ fontSize: 50 }} />
+      <TelegramIcon style={{ fontSize: 30 }} />
     </SkillComb>
   ))
   .add('LinkedIn', () => (
     <SkillComb>
-      <LinkedInIcon style={{ fontSize: 50 }} />
+      <LinkedInIcon style={{ fontSize: 30 }} />
     </SkillComb>
   ));
