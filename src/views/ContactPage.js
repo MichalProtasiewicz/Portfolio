@@ -26,7 +26,9 @@ const StyledHeading = styled(Heading)`
 
 const StyledParagraph = styled(Paragraph)`
   width: 95%;
-  max-width: 500px;
+  @media (min-width: 950px) {
+    max-width: 600px;
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -39,8 +41,11 @@ const ContactFormWrapper = styled.form`
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 760px;
   padding-top: 20px;
+
+  @media (min-width: 950px) {
+    max-width: 600px;
+  }
 `;
 
 const InputsWrapper = styled.div`

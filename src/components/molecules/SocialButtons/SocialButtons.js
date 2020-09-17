@@ -7,22 +7,26 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const SocialButtonsWrapper = styled.div`
+  position: relative;
+  left: 30px;
   display: none;
   height: 100%;
   width: -moz-calc(100vw - 860px);
   width: -webkit-calc(100vw - 860px);
   width: -o-calc(100vw - 860px);
   width: calc(100vw - 860px);
-  @media (min-width: 1200px) {
+  @media (min-width: 950px) {
     display: flex;
     flex-direction: column;
     align-self: center;
     align-items: center;
   }
-  @media (min-width: 1800px) {
+  @media (min-width: 1050px) {
+    left: 0px;
+  }
+  @media (min-width: 1600px) {
     flex-direction: row;
     justify-content: center;
-
   }
 `;
 

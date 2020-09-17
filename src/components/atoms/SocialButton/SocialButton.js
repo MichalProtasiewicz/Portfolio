@@ -7,7 +7,7 @@ const SocialButton = styled.button`
   padding: 0;
   width: 75px;
   height: 75px;
-  margin: 0 50px;
+  margin: 30px 50px;
   border: none;
   outline: none;
   background: ${({ theme }) => theme.gray20};
@@ -87,14 +87,10 @@ const SocialButton = styled.button`
         }
       `}
   }
-
-  @media (min-width: 1200px) {
-    margin: 30px 50px;
-  }
-  @media (min-width: 1800px) {
+  @media (min-width: 1600px) {
     margin: 0px 50px;
   }
-  @media (min-width: 2200px) {
+  @media (min-width: 1800px) {
     margin: 0px 75px;
   }
 `;
