@@ -19,6 +19,9 @@ const SkillComb = styled.div`
     border-right: 17.32px solid ${({ theme }) => theme.gray20};
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
+    &:hover {
+      border-right: 17.32px solid ${({ theme }) => theme.blue};
+    }
   }
   &:after {
     content: '';
@@ -30,6 +33,16 @@ const SkillComb = styled.div`
     border-left: 17.32px solid ${({ theme }) => theme.gray20};
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
+  }
+  &:hover {
+    color: ${({ theme }) => theme.white};
+    background: ${({ theme }) => theme.blue};
+    &:before {
+      border-right: 17.32px solid ${({ theme }) => theme.blue};
+    }
+    &:after {
+      border-left: 17.32px solid ${({ theme }) => theme.blue};
+    }
   }
 `;
 
