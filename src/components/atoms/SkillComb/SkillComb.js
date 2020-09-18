@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const SkillComb = styled.div`
   position: absolute;
-  width: 34.64px;
+  width: 34.65px;
   height: 60px;
   color: ${({ theme }) => theme.gray50};
   background: ${({ theme }) => theme.gray20};
