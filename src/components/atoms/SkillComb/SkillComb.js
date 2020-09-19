@@ -44,6 +44,36 @@ const SkillComb = styled.div`
       border-left: 17.32px solid ${({ color }) => color};
     }
   }
+
+  @media (min-width: 1400px) {
+    width: 43.31px;
+    height: 75px;
+    &:before {
+      left: -21.65px;
+      top: 37.50;
+      border-right: 21.65px solid ${({ theme }) => theme.gray20};
+      border-top: 37.50px solid transparent;
+      border-bottom: 37.50px solid transparent;
+      &:hover {
+        border-right: 21.65px solid ${({ theme }) => theme.blue};
+      }
+    }
+    &:after {
+      right: -21.65px;
+      top: 37.50;
+      border-left: 21.65px solid ${({ theme }) => theme.gray20};
+      border-top: 37.50px solid transparent;
+      border-bottom: 37.50px solid transparent;
+    }
+    &:hover {
+      &:before {
+        border-right: 21.65px solid ${({ color }) => color};
+      }
+      &:after {
+        border-left: 21.65px solid ${({ color }) => color};
+      }
+    }
+  }
 `;
 
 export default SkillComb;

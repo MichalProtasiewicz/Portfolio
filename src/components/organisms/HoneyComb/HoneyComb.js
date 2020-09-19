@@ -52,6 +52,13 @@ const HoneyCombGridWrapper = styled.div`
     top: 35%;
     left: 70%;
   }
+  @media (min-width: 1400px) {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    margin-left: -325px;
+    margin-top: -325px;
+  }
 `;
 
 const HoneyCombWrapper = styled.div`
@@ -152,36 +159,98 @@ const HoneyCombWrapper = styled.div`
         left: 340px;
       `}
   }
+  @media (min-width: 1400px) {
+    height: 240px;
+    width: 230px;
+    ${({ first }) =>
+      first &&
+      css`
+        top: 412px;
+        left: 0px;
+      `}
+    ${({ second }) =>
+      second &&
+      css`
+        top: 371px;
+        left: 212px;
+      `}
+  ${({ third }) =>
+      third &&
+      css`
+        top: 412px;
+        left: 424px;
+      `}
+  ${({ fourth }) =>
+      fourth &&
+      css`
+        top: 206px;
+        left: 353px;
+      `}
+  ${({ fifth }) =>
+      fifth &&
+      css`
+        top: 0px;
+        left: 424px;
+      `}
+  }
 `;
 
 const SkillComb1 = styled(SkillComb)`
   top: 65px;
   left: 72px;
+  @media (min-width: 1400px) {
+    top: 81.75px;
+    left: 92.25px;
+  }
 `;
 
 const SkillComb2 = styled(SkillComb)`
   top: 0px;
   left: 72px;
+  @media (min-width: 1400px) {
+    top: 0px;
+    left: 92.25px;
+  }
 `;
 const SkillComb3 = styled(SkillComb)`
   top: 32.5px;
   left: 15px;
+  @media (min-width: 1400px) {
+    top: 41.25px;
+    left: 21px;
+  }
 `;
 const SkillComb4 = styled(SkillComb)`
   top: 97.5px;
   left: 15px;
+  @media (min-width: 1400px) {
+    top: 123.75px;
+    left: 21px;
+  }
 `;
 const SkillComb5 = styled(SkillComb)`
   top: 130px;
   left: 72px;
+  @media (min-width: 1400px) {
+    top: 163.5px;
+    left: 92.25px;
+  }
 `;
 const SkillComb6 = styled(SkillComb)`
   top: 97.5px;
   left: 129px;
+  @media (min-width: 1400px) {
+    top: 123.75px;
+    left: 163.5px;
+  }
 `;
 const SkillComb7 = styled(SkillComb)`
   top: 32.5px;
   left: 129px;
+  @media (min-width: 1400px) {
+    top: 41.25px;
+    left: 163.5px;
+  }
 `;
 
 const HoneyComb = () => (
