@@ -7,9 +7,9 @@ const ButtonIcon = styled.button`
   height: 35px;
   border: none;
   outline: none;
-  background:none;
-
-  &{
+  background: none;
+  transition: 0.2s;
+  & {
     color: ${({ theme }) => theme.gray40};
     &:hover {
       color: ${({ theme }) => theme.blue};

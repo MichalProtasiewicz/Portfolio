@@ -15,6 +15,7 @@ const Button = styled.button`
   border-radius: 5px;
   font-size: ${({ theme }) => theme.fontSize.s};
   text-transform: uppercase;
+  transition: 0.2s ease all;
   &:hover {
     background-color: ${({ theme }) => theme.blue};
     color: ${({ theme }) => theme.black};

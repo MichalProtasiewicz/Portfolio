@@ -9,6 +9,7 @@ const SkillComb = styled.div`
   justify-content: center;
   align-items: center;
   fill: ${({ theme }) => theme.gray50};
+  transition: 0.2s ease all;
 
   &:before {
     content: '';
@@ -19,6 +20,7 @@ const SkillComb = styled.div`
     border-right: 17.32px solid ${({ theme }) => theme.gray20};
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
+    transition: 0.2s;
     &:hover {
       border-right: 17.32px solid ${({ theme }) => theme.blue};
     }
@@ -33,6 +35,7 @@ const SkillComb = styled.div`
     border-left: 17.32px solid ${({ theme }) => theme.gray20};
     border-top: 30px solid transparent;
     border-bottom: 30px solid transparent;
+    transition: 0.2s;
   }
   &:hover {
     fill: ${({ theme }) => theme.white};
@@ -50,20 +53,20 @@ const SkillComb = styled.div`
     height: 75px;
     &:before {
       left: -21.65px;
-      top: 37.50;
+      top: 37.5;
       border-right: 21.65px solid ${({ theme }) => theme.gray20};
-      border-top: 37.50px solid transparent;
-      border-bottom: 37.50px solid transparent;
+      border-top: 37.5px solid transparent;
+      border-bottom: 37.5px solid transparent;
       &:hover {
         border-right: 21.65px solid ${({ theme }) => theme.blue};
       }
     }
     &:after {
       right: -21.65px;
-      top: 37.50;
+      top: 37.5;
       border-left: 21.65px solid ${({ theme }) => theme.gray20};
-      border-top: 37.50px solid transparent;
-      border-bottom: 37.50px solid transparent;
+      border-top: 37.5px solid transparent;
+      border-bottom: 37.5px solid transparent;
     }
     &:hover {
       &:before {
