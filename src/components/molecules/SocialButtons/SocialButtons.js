@@ -8,7 +8,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 const SocialButtonsWrapper = styled.div`
   position: relative;
-  left: 30px;
+  left: 50px;
   display: none;
   height: 100%;
   width: -moz-calc(100vw - 860px);
@@ -20,9 +20,6 @@ const SocialButtonsWrapper = styled.div`
     flex-direction: column;
     align-self: center;
     align-items: center;
-  }
-  @media (min-width: 1050px) {
-    left: 0px;
   }
   @media (min-width: 1600px) {
     flex-direction: row;

@@ -5,6 +5,18 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 
 const HoneyCombGridWrapper = styled.div`
   position: relative;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  @media (min-width: 580px) {
+    top: 53%;
+    margin-left: -240px;
+  }
+  @media (min-width: 950px) {
+    position: absolute;
+    top: 35%;
+    left: 70%;
+  }
 `;
 
 const HoneyCombWrapper = styled.div`

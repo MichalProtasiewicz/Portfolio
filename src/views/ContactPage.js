@@ -2,23 +2,51 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { routes } from 'routes';
-import PageTemplate from 'templates/PageTemplate';
 import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
 import Input from 'components/atoms/Input/Input';
 import Button from 'components/atoms/Button/Button';
-import SocialButtons from 'components/molecules/SocialButtons/SocialButtons'
+import SocialButtons from 'components/molecules/SocialButtons/SocialButtons';
 
 const PageWrapper = styled.div`
+  padding: 13% 7% 13% 7%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  width: 100%;
-  max-width: 800px;
+  align-items: flex-start;
+  width: 100vw;
+  min-height: -moz-calc(100vh - 60px);
+  min-height: -webkit-calc(100vh - 60px);
+  min-height: -o-calc(100vh - 60px);
+  min-height: calc(100vh - 60px);
+  height: -moz-calc(100% - 60px);
+  height: -webkit-calc(100% - 60px);
+  height: -o-calc(100% - 60px);
+  height: calc(100% - 60px);
+
+  @media (min-width: 750px) {
+    padding: 12% 10% 12% 10%;
+  }
+  @media (min-width: 950px) {
+    padding: 125px 90px 125px 90px;
+  }
+
+  @media (min-width: 950px) {
+    justify-content: center;
+    height: 100%;
+    width: -moz-calc(100vw - 60px);
+    width: -webkit-calc(100vw - 60px);
+    width: -o-calc(100vw - 60px);
+    width: calc(100vw - 60px);
+  }
+  @media (min-width: 950px) {
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+  }
 `;
 
-const HeadingWrapper = styled.div``;
+const Wrapper = styled.div``;
 
 const StyledHeading = styled(Heading)`
   padding-left: 10px;
@@ -86,13 +114,11 @@ const StyledButton = styled(Button)`
 `;
 
 const ContactPage = () => (
-  <PageTemplate>
-    <PageWrapper>
-      <HeadingWrapper>
-        <CodeText>&lt;h1&gt;</CodeText>
-        <StyledHeading>Contact me</StyledHeading>
-        <CodeText>&lt;/h1&gt;</CodeText>
-      </HeadingWrapper>
+  <PageWrapper>
+    <Wrapper>
+      <CodeText>&lt;h1&gt;</CodeText>
+      <StyledHeading>Contact me</StyledHeading>
+      <CodeText>&lt;/h1&gt;</CodeText>
       <StyledParagraph>
         You can find me in many places.&nbsp;
         <StyledLink to={routes.github}>Github</StyledLink>,&nbsp;
@@ -117,8 +143,8 @@ const ContactPage = () => (
         </InputsWrapper>
         <StyledButton type="submit">Send</StyledButton>
       </ContactFormWrapper>
-      </PageWrapper>
-      <SocialButtons/>
-  </PageTemplate>
+    </Wrapper>
+    <SocialButtons />
+  </PageWrapper>
 );
 export default ContactPage;
