@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { routes } from 'routes';
 import logoIcon from 'assets/icons/Logo.svg';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
@@ -134,21 +134,21 @@ const Navbar = () => {
         </NavLink>
       </NavList>
       <SocialList>
-        <Link to={routes.linkedin}>
+        <a target="_blank" rel="noreferrer" href={routes.linkedin}>
           <SocialButtonIcon small>
             <LinkedInIcon style={{ fontSize: 25 }} />
           </SocialButtonIcon>
-        </Link>
-        <Link to={routes.github}>
+        </a>
+        <a target="_blank" rel="noreferrer" href={routes.github}>
           <SocialButtonIcon small>
             <GitHubIcon style={{ fontSize: 25 }} />
           </SocialButtonIcon>
-        </Link>
-        <Link to={routes.telegram}>
+        </a>
+        <a target="_blank" rel="noreferrer" href={routes.telegram}>
           <SocialButtonIcon small>
             <TelegramIcon style={{ fontSize: 25 }} />
           </SocialButtonIcon>
-        </Link>
+        </a>
       </SocialList>
     </NavbarWrapper>
   );

@@ -7,4 +7,5 @@ export const routes = {
   github: 'https://github.com/MichalProtasiewicz',
   linkedin: 'https://www.linkedin.com/in/micha%C5%82-protasiewicz-28785518b/',
   telegram: 'https://t.me/prota_michal',
+  email: 'mailto:michalprotasiewicz01@gmail.com',
 };

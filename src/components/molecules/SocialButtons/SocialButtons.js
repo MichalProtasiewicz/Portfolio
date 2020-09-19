@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { routes } from 'routes';
 import SocialButton from 'components/atoms/SocialButton/SocialButton';
 import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -29,18 +30,26 @@ const SocialButtonsWrapper = styled.div`
 
 const SocialButtons = () => (
   <SocialButtonsWrapper>
-    <SocialButton linkedin>
-      <LinkedInIcon style={{ fontSize: 50 }} />
-    </SocialButton>
-    <SocialButton github>
-      <GitHubIcon style={{ fontSize: 50 }} />
-    </SocialButton>
-    <SocialButton email>
-      <EmailOutlinedIcon style={{ fontSize: 50 }} />
-    </SocialButton>
-    <SocialButton telegram>
-      <TelegramIcon style={{ fontSize: 50 }} />
-    </SocialButton>
+    <a target="_blank" rel="noreferrer" href={routes.linkedin}>
+      <SocialButton linkedin>
+        <LinkedInIcon style={{ fontSize: 50 }} />
+      </SocialButton>
+    </a>
+    <a target="_blank" rel="noreferrer" href={routes.github}>
+      <SocialButton github>
+        <GitHubIcon style={{ fontSize: 50 }} />
+      </SocialButton>
+    </a>
+    <a target="_blank" rel="noreferrer" href={routes.email}>
+      <SocialButton email>
+        <EmailOutlinedIcon style={{ fontSize: 50 }} />
+      </SocialButton>
+    </a>
+    <a target="_blank" rel="noreferrer" href={routes.telegram}>
+      <SocialButton telegram>
+        <TelegramIcon style={{ fontSize: 50 }} />
+      </SocialButton>
+    </a>
   </SocialButtonsWrapper>
 );
 
