@@ -1,7 +1,42 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import SkillComb from 'components/atoms/SkillComb/SkillComb';
-import GitHubIcon from '@material-ui/icons/GitHub';
+
+import { ReactComponent as HtmlIcon } from 'assets/icons/html5.svg';
+import { ReactComponent as CssIcon } from 'assets/icons/css3.svg';
+import { ReactComponent as JsIcon } from 'assets/icons/javascript.svg';
+import { ReactComponent as ReactIcon } from 'assets/icons/react.svg';
+import { ReactComponent as AngularIcon } from 'assets/icons/angular.svg';
+import { ReactComponent as VueIcon } from 'assets/icons/vuejs.svg';
+import { ReactComponent as NodeJsIcon } from 'assets/icons/nodejs.svg';
+import { ReactComponent as ReduxIcon } from 'assets/icons/redux.svg';
+import { ReactComponent as StorybookIcon } from 'assets/icons/storybook.svg';
+import { ReactComponent as JestIcon } from 'assets/icons/jest.svg';
+import { ReactComponent as GraphqlIcon } from 'assets/icons/graphql.svg';
+import { ReactComponent as ApolloIcon } from 'assets/icons/apollo.svg';
+import { ReactComponent as GatsbyIcon } from 'assets/icons/gatsby.svg';
+import { ReactComponent as SassIcon } from 'assets/icons/sass.svg';
+import { ReactComponent as PythonIcon } from 'assets/icons/python.svg';
+import { ReactComponent as DjangoIcon } from 'assets/icons/django.svg';
+import { ReactComponent as MysqlIcon } from 'assets/icons/mysql.svg';
+import { ReactComponent as NetIcon } from 'assets/icons/net.svg';
+import { ReactComponent as CsharpIcon } from 'assets/icons/c#.svg';
+import { ReactComponent as CplusplusIcon } from 'assets/icons/cplusplus.svg';
+import { ReactComponent as CIcon } from 'assets/icons/c.svg';
+import { ReactComponent as UnityIcon } from 'assets/icons/unity.svg';
+import { ReactComponent as VrIcon } from 'assets/icons/vr.svg';
+import { ReactComponent as ArIcon } from 'assets/icons/ar.svg';
+import { ReactComponent as MotionCaptureIcon } from 'assets/icons/motion-sensor.svg';
+import { ReactComponent as VSCIcon } from 'assets/icons/visualstudiocode.svg';
+import { ReactComponent as VSIcon } from 'assets/icons/visualstudio.svg';
+import { ReactComponent as MongoIcon } from 'assets/icons/mongodb.svg';
+import { ReactComponent as PhotoshopIcon } from 'assets/icons/photoshop.svg';
+import { ReactComponent as GimpIcon } from 'assets/icons/gimp.svg';
+import { ReactComponent as AtlassianIcon } from 'assets/icons/atlassian.svg';
+import { ReactComponent as GithubIcon } from 'assets/icons/github.svg';
+import { ReactComponent as GitIcon } from 'assets/icons/git.svg';
+import { ReactComponent as AdobeXdIcon } from 'assets/icons/adobexd.svg';
+import { ReactComponent as FigmaIcon } from 'assets/icons/figma.svg';
 
 const HoneyCombGridWrapper = styled.div`
   position: relative;
@@ -152,122 +187,122 @@ const SkillComb7 = styled(SkillComb)`
 const HoneyComb = () => (
   <HoneyCombGridWrapper>
     <HoneyCombWrapper first>
-      <SkillComb1>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb1 color="#E34F26">
+        <HtmlIcon width={50} height={50} />
       </SkillComb1>
-      <SkillComb2>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb2 color="#1572B6">
+        <CssIcon width={50} height={50} />
       </SkillComb2>
-      <SkillComb3>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb3 color="#F7DF1E">
+        <JsIcon width={50} height={50} />
       </SkillComb3>
-      <SkillComb4>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb4 color="#61DAFB">
+        <ReactIcon width={50} height={50} />
       </SkillComb4>
-      <SkillComb5>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb5 color="#DD0031">
+        <AngularIcon width={50} height={50} />
       </SkillComb5>
-      <SkillComb6>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb6 color="#4FC08D">
+        <VueIcon width={50} height={50} />
       </SkillComb6>
-      <SkillComb7>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb7 color="#339933">
+        <NodeJsIcon width={50} height={50} />
       </SkillComb7>
     </HoneyCombWrapper>
 
     <HoneyCombWrapper second>
-      <SkillComb1>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb1 color="#764ABC">
+        <ReduxIcon width={50} height={50} />
       </SkillComb1>
-      <SkillComb2>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb2 color="#FF4785">
+        <StorybookIcon width={50} height={50} />
       </SkillComb2>
-      <SkillComb3>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb3 color="#C21325">
+        <JestIcon width={50} height={50} />
       </SkillComb3>
-      <SkillComb4>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb4 color="#E10098">
+        <GraphqlIcon width={50} height={50} />
       </SkillComb4>
-      <SkillComb5>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb5 color="#311C87">
+        <ApolloIcon width={50} height={50} />
       </SkillComb5>
-      <SkillComb6>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb6 color="#663399">
+        <GatsbyIcon width={50} height={50} />
       </SkillComb6>
-      <SkillComb7>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb7 color="#CC6699">
+        <SassIcon width={50} height={50} />
       </SkillComb7>
     </HoneyCombWrapper>
 
     <HoneyCombWrapper third>
-      <SkillComb1>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb1 color="#3776AB">
+        <PythonIcon width={50} height={50} />
       </SkillComb1>
-      <SkillComb2>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb2 color="#092E20">
+        <DjangoIcon width={50} height={50} />
       </SkillComb2>
-      <SkillComb3>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb3 color="#4479A1">
+        <MysqlIcon width={50} height={50} />
       </SkillComb3>
-      <SkillComb4>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb4 color="#5C2D91">
+        <NetIcon width={50} height={50} />
       </SkillComb4>
-      <SkillComb5>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb5 color="#239120">
+        <CsharpIcon width={50} height={50} />
       </SkillComb5>
-      <SkillComb6>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb6 color="#00599C">
+        <CplusplusIcon width={50} height={50} />
       </SkillComb6>
-      <SkillComb7>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb7 color="#A8B9CC">
+        <CIcon width={50} height={50} />
       </SkillComb7>
     </HoneyCombWrapper>
 
     <HoneyCombWrapper fourth>
-      <SkillComb1>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb1 color="#000000">
+        <UnityIcon width={50} height={50} />
       </SkillComb1>
-      <SkillComb2>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb2 color="#0679c1">
+        <VrIcon width={50} height={50} />
       </SkillComb2>
-      <SkillComb3>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb3 color="#9ed355">
+        <ArIcon width={50} height={50} />
       </SkillComb3>
-      <SkillComb4>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb4 color="#c43149">
+        <MotionCaptureIcon width={50} height={50} />
       </SkillComb4>
-      <SkillComb5>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb5 color="#007ACC">
+        <VSCIcon width={50} height={50} />
       </SkillComb5>
-      <SkillComb6>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb6 color="#5C2D91">
+        <VSIcon width={50} height={50} />
       </SkillComb6>
-      <SkillComb7>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb7 color="#47A248">
+        <MongoIcon width={50} height={50} />
       </SkillComb7>
     </HoneyCombWrapper>
 
     <HoneyCombWrapper fifth>
-      <SkillComb1>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb1 color="#31A8FF">
+        <PhotoshopIcon width={50} height={50} />
       </SkillComb1>
-      <SkillComb2>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb2 color="#5C5543">
+        <GimpIcon width={50} height={50} />
       </SkillComb2>
-      <SkillComb3>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb3 color="#0052CC">
+        <AtlassianIcon width={50} height={50} />
       </SkillComb3>
-      <SkillComb4>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb4 color="#181717">
+        <GithubIcon width={50} height={50} />
       </SkillComb4>
-      <SkillComb5>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb5 color="#F05032">
+        <GitIcon width={50} height={50} />
       </SkillComb5>
-      <SkillComb6>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb6 color="#FF26BE">
+        <AdobeXdIcon width={50} height={50} />
       </SkillComb6>
-      <SkillComb7>
-        <GitHubIcon style={{ fontSize: 30 }} />
+      <SkillComb7 color="#F24E1E">
+        <FigmaIcon width={50} height={50} />
       </SkillComb7>
     </HoneyCombWrapper>
   </HoneyCombGridWrapper>

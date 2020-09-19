@@ -6,7 +6,6 @@ const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
   text-decoration: none;
   padding: 0 12px;
   background-color: transparent;
@@ -16,6 +15,14 @@ const Button = styled.button`
   border-radius: 5px;
   font-size: ${({ theme }) => theme.fontSize.s};
   text-transform: uppercase;
+  &:hover {
+    background-color: ${({ theme }) => theme.blue};
+    color: ${({ theme }) => theme.black};
+  }
+  &:active {
+    background-color: ${({ theme }) => theme.blue};
+    color: ${({ theme }) => theme.black};
+  }
 `;
 
 export default Button;

@@ -4,11 +4,11 @@ const SkillComb = styled.div`
   position: absolute;
   width: 34.65px;
   height: 60px;
-  color: ${({ theme }) => theme.gray50};
   background: ${({ theme }) => theme.gray20};
   display: flex;
   justify-content: center;
   align-items: center;
+  fill: ${({ theme }) => theme.gray50};
 
   &:before {
     content: '';
@@ -35,13 +35,13 @@ const SkillComb = styled.div`
     border-bottom: 30px solid transparent;
   }
   &:hover {
-    color: ${({ theme }) => theme.white};
-    background: ${({ theme }) => theme.blue};
+    fill: ${({ theme }) => theme.white};
+    background: ${({ color }) => color};
     &:before {
-      border-right: 17.32px solid ${({ theme }) => theme.blue};
+      border-right: 17.32px solid ${({ color }) => color};
     }
     &:after {
-      border-left: 17.32px solid ${({ theme }) => theme.blue};
+      border-left: 17.32px solid ${({ color }) => color};
     }
   }
 `;
