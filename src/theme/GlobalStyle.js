@@ -7,7 +7,6 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
   html {
     font-size: 62.5%;
     line-height: 1.3;

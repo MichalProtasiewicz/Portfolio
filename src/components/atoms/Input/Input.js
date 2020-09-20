@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { ErrorMessage } from 'formik';
 
 const StyledInputWrapper = styled.div`
   position: relative;
@@ -15,6 +16,18 @@ const StyledInput = styled.input`
   color: ${({ theme }) => theme.white};
   outline: none;
   &:focus {
+    box-shadow: 0 0 0px 3px ${({ theme }) => theme.blue};
+  }
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    border: 0px;
+    -webkit-text-fill-color: white;
+    -webkit-box-shadow: 0 0 0px 1000px ${({ theme }) => theme.gray20} inset;
+    transition: background-color 5000s ease-in-out 0s;
+  }
+  &:-webkit-autofill:focus {
     box-shadow: 0 0 0px 3px ${({ theme }) => theme.blue};
   }
 `;
@@ -44,16 +57,16 @@ const InputLabel = styled.label`
 
 const ErrorLabel = styled.span`
   position: absolute;
-  top: 55px;
-  left: 20px;
+  top: 5%;
+  right: 10px;
   color: ${({ theme }) => theme.red};
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.xxs};
 `;
 
 const Input = ({ children, errorLabelName, ...props }) => {
   return (
     <StyledInputWrapper>
-      <StyledInput {...props} required />
+      <StyledInput {...props} />
       {StyledInput.value === '' ? (
         <InputLabel>{children}</InputLabel>
       ) : (
@@ -61,7 +74,7 @@ const Input = ({ children, errorLabelName, ...props }) => {
       )}
       {errorLabelName ? (
         <ErrorLabel>
-          <p>error</p>
+          <ErrorMessage name={errorLabelName}>{(msg) => msg}</ErrorMessage>
         </ErrorLabel>
       ) : null}
     </StyledInputWrapper>

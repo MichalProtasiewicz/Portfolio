@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { routes } from 'routes';
+import { Formik, Form } from 'formik';
+import * as Yup from 'yup';
 import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
@@ -64,7 +66,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
 `;
 
-const ContactFormWrapper = styled.form`
+const StyledForm = styled(Form)`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -113,6 +115,13 @@ const StyledButton = styled(Button)`
   align-self: flex-end;
 `;
 
+const ContactSchema = Yup.object().shape({
+  name: Yup.string().required('Required'),
+  email: Yup.string().email('Wrong email').required('Required'),
+  subject: Yup.string().required('Required'),
+  message: Yup.string().required('Required'),
+});
+
 const ContactPage = () => (
   <PageWrapper>
     <Wrapper>
@@ -128,21 +137,69 @@ const ContactPage = () => (
         However, if u have other request or question, don’t hestitate to contact me using below form
         either.
       </StyledParagraph>
-      <ContactFormWrapper>
-        <InputsWrapper>
-          <Input>Name</Input>
-          <Input>Email</Input>
-          <SubjectInputWrapper>
-            <Input>Subject</Input>
-          </SubjectInputWrapper>
-          <MessageInputWrapper>
-            <Input as="textarea" style={{ resize: 'vertical', minHeight: '125px' }}>
-              Message
-            </Input>
-          </MessageInputWrapper>
-        </InputsWrapper>
-        <StyledButton type="submit">Send</StyledButton>
-      </ContactFormWrapper>
+      <Formik
+        initialValues={{ name: '', email: '', subject: '', message: '' }}
+        validationSchema={ContactSchema}
+        onSubmit={({ name, email, subject, message }) => {
+          console.log(name, email, subject, message);
+        }}
+      >
+        {({ values, handleChange, handleBlur, handleSubmit }) => {
+          return (
+            <StyledForm onSubmit={handleSubmit}>
+              <InputsWrapper>
+                <Input
+                  type="text"
+                  name="name"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.name}
+                  errorLabelName="name"
+                >
+                  Name
+                </Input>
+                <Input
+                  type="text"
+                  name="email"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={values.email}
+                  errorLabelName="email"
+                >
+                  Email
+                </Input>
+                <SubjectInputWrapper>
+                  <Input
+                    type="text"
+                    name="subject"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.subject}
+                    errorLabelName="subject"
+                  >
+                    Subject
+                  </Input>
+                </SubjectInputWrapper>
+                <MessageInputWrapper>
+                  <Input
+                    as="textarea"
+                    style={{ resize: 'vertical', minHeight: '125px' }}
+                    type="text"
+                    name="message"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.message}
+                    errorLabelName="message"
+                  >
+                    Message
+                  </Input>
+                </MessageInputWrapper>
+              </InputsWrapper>
+              <StyledButton type="submit">Send</StyledButton>
+            </StyledForm>
+          );
+        }}
+      </Formik>
     </Wrapper>
     <SocialButtons />
   </PageWrapper>
