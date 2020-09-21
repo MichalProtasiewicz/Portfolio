@@ -5,4 +5,4 @@ import Navbar from './Navbar';
 
 storiesOf('Organisms/Navbar', module)
   .addDecorator(StoryRouter())
-  .add('About', () => <Navbar />);
+  .add('Navbar', () => <Navbar />);
