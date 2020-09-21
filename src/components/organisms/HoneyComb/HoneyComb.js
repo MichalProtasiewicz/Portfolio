@@ -26,7 +26,7 @@ import { ReactComponent as CIcon } from 'assets/icons/c.svg';
 import { ReactComponent as UnityIcon } from 'assets/icons/unity.svg';
 import { ReactComponent as VrIcon } from 'assets/icons/vr.svg';
 import { ReactComponent as ArIcon } from 'assets/icons/ar.svg';
-import { ReactComponent as MotionCaptureIcon } from 'assets/icons/motion-sensor.svg';
+import { ReactComponent as GsapIcon } from 'assets/icons/gsap.svg';
 import { ReactComponent as VSCIcon } from 'assets/icons/visualstudiocode.svg';
 import { ReactComponent as VSIcon } from 'assets/icons/visualstudio.svg';
 import { ReactComponent as MongoIcon } from 'assets/icons/mongodb.svg';
@@ -334,11 +334,11 @@ const HoneyComb = () => (
       <SkillComb2 color="#0679c1">
         <VrIcon width={50} height={50} />
       </SkillComb2>
-      <SkillComb3 color="#9ed355">
+      <SkillComb3 color="#c43149">
         <ArIcon width={50} height={50} />
       </SkillComb3>
-      <SkillComb4 color="#c43149">
-        <MotionCaptureIcon width={50} height={50} />
+      <SkillComb4 color="#36eb62">
+        <GsapIcon width={50} height={50} />
       </SkillComb4>
       <SkillComb5 color="#007ACC">
         <VSCIcon width={50} height={50} />

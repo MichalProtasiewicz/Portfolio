@@ -66,7 +66,7 @@ const HeaderWrapping = styled.div`
 `;
 
 const StyledHeading = styled(Heading)`
-  padding-left: 10px;
+  padding-left: 7px;
   color: ${({ theme }) => theme.white};
   @media (max-width: 460px) {
     font-size: ${({ theme }) => theme.fontSize.xm};
@@ -87,7 +87,7 @@ const MainPage = () => (
       <CodeText>&lt;h1&gt;</CodeText>
       <StyledHeading>
         Hello,
-        <br /> I&apos;m <StyledSpan>Michał</StyledSpan>,<br /> frontend developer.
+        <br /> I&apos;m <StyledSpan>Michał</StyledSpan>,<br /> front end developer.
       </StyledHeading>
       <CodeText>&lt;/h1&gt;</CodeText>
     </HeaderWrapping>
