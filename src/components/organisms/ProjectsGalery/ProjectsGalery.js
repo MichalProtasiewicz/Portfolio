@@ -31,7 +31,7 @@ const TitleWrapper = styled.div`
 const StyledImg = styled.img`
   height: auto;
   width: 100%;
-  max-width: 100%;
+
 `;
 
 const Title = styled.p`
