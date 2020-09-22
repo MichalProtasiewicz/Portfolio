@@ -2,9 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
+import ProjectsGalery from 'components/organisms/ProjectsGalery/ProjectsGalery';
 
 const PageWrapper = styled.div`
   padding: 13% 7% 13% 7%;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -33,11 +35,6 @@ const PageWrapper = styled.div`
     width: -o-calc(100vw - 60px);
     width: calc(100vw - 60px);
   }
-  @media (min-width: 950px) {
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-  }
 `;
 
 const Wrapper = styled.div``;
@@ -53,6 +50,7 @@ const ProjectsPage = () => (
       <StyledHeading>My projects</StyledHeading>
       <CodeText>&lt;/h1&gt;</CodeText>
     </Wrapper>
+    <ProjectsGalery />
   </PageWrapper>
 );
 

@@ -1,33 +1,48 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import GitHubIcon from '@material-ui/icons/GitHub';
+import { projects } from 'constants/projects';
+import CodeIcon from '@material-ui/icons/Code';
+import PublicIcon from '@material-ui/icons/Public';
+import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import ButtonIcon from 'components/atoms/ButtonIcon/ButtonIcon';
-import screenshot from 'assets/screenshots/tmp.jpg';
+
 
 const GaleryWrapper = styled.div`
-  position: absolute;
-  height: 90%;
-  width: 60%;
+  position: relative;
+  justify-self: center;
+  align-self: center;
+  height: auto;
+  width: 100%;
+  max-width: 500px;
+  top: 50px;
   border: 3px solid ${({ theme }) => theme.blue};
   display: flex;
   flex-direction: column;
   align-items: center;
 `;
 const TitleWrapper = styled.div`
-  width: 85%;
-  margin-top: 5px;
+  width: 90%;
+  margin-top: 10px;
   display: flex;
   justify-content: space-between;
 `;
 
 const StyledImg = styled.img`
-  height: 70%;
-  width: auto;
+  height: auto;
+  width: 100%;
   max-width: 100%;
+`;
+
+const Title = styled.p`
+  margin-top: 7px;
+  font-size: ${({ theme }) => theme.fontSize.s};
+  font-weight: bold;
 `;
 
 const Description = styled.p`
   text-align: center;
+  padding: 0 2%;
 `;
 
 const StyledSpan = styled.span`
@@ -37,24 +52,46 @@ const StyledSpan = styled.span`
   color: ${({ theme }) => theme.blue};
 `;
 
-const ProjectsGalery = () => (
-  <GaleryWrapper>
-    <StyledImg src={screenshot} />
-    <TitleWrapper>
-      <ButtonIcon>
-        <GitHubIcon style={{ fontSize: 25 }} />
+const ProjectsGalery = () => {
+  const [projectNumber, setProjectNumber] = useState(0);
+
+  const IncrementProjectNumber = () => {
+    if(projectNumber<projects.length-1)
+    {
+      setProjectNumber(projectNumber+1)
+    }
+  };
+  const DecreaseProjectNumber = () => {
+    if (projectNumber > 0) {
+      setProjectNumber(projectNumber - 1);
+    }
+  };
+  return (
+    <GaleryWrapper>
+      <StyledImg src={projects[projectNumber].photo} />
+      <TitleWrapper>
+        <a target="_blank" rel="noreferrer" href={projects[projectNumber].codeLink}>
+          <ButtonIcon>
+            <CodeIcon style={{ fontSize: 35 }} />
+          </ButtonIcon>
+        </a>
+        <Title>{projects[projectNumber].title}</Title>
+        <a target="_blank" rel="noreferrer" href={projects[projectNumber].liveLink}>
+          <ButtonIcon>
+            <PublicIcon style={{ fontSize: 35 }} />
+          </ButtonIcon>
+        </a>
+      </TitleWrapper>
+      <Description>{projects[projectNumber].description}</Description>
+      <ButtonIcon onClick={() => DecreaseProjectNumber()}>
+        <ArrowBackIosIcon style={{ fontSize: 35 }} />
       </ButtonIcon>
-      <p>Project Title</p>
-      <ButtonIcon>
-        <GitHubIcon style={{ fontSize: 25 }} />
+      <ButtonIcon onClick={() => IncrementProjectNumber()}>
+        <ArrowForwardIosIcon style={{ fontSize: 35 }} />
       </ButtonIcon>
-    </TitleWrapper>
-    <Description>
-      Gra platformowa 2D stworzona w silniku Unity. Stworzona w 2018 roku, zamieszczna na platformie
-      google play.
-    </Description>
-    <StyledSpan>.....</StyledSpan>
-  </GaleryWrapper>
-);
+      <StyledSpan>.....</StyledSpan>
+    </GaleryWrapper>
+  );
+};
 
 export default ProjectsGalery;
