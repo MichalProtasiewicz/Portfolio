@@ -6,30 +6,25 @@ import CodeIcon from '@material-ui/icons/Code';
 import PublicIcon from '@material-ui/icons/Public';
 
 const Wrapper = styled.div`
-  position: relative;
   width: 100%;
   max-width: 300px;
   height: 375px;
-  border: 3px solid ${({ theme }) => theme.blue};
-  border-radius: 10px;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media (min-width: 420px) {
-  }
+  border: 3px solid ${({ theme }) => theme.blue};
+  border-radius: 10px;
 `;
 
 const Title = styled.h2`
   color: ${({ theme }) => theme.blue};
-
+  text-align: center;
 `;
 
 const Photo = styled.img`
   width: 100%;
   height: 170px;
-  justify-self: left;
-  align-self: left;
-
 `;
 
 const Description = styled.p`

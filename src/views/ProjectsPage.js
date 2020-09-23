@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
-import ProjectCard from 'components/molecules/ProjectCard/ProjectCard';
-
-import spizarkaImage from 'assets/screenshots/herroOfMorrigan.jpg';
+import ProjectsList from 'components/organisms/ProjectsList/ProjectsList';
 
 const PageWrapper = styled.div`
   padding: 13% 7% 13% 7%;
@@ -52,13 +50,7 @@ const ProjectsPage = () => (
       <StyledHeading>My projects</StyledHeading>
       <CodeText>&lt;/h1&gt;</CodeText>
     </Wrapper>
-    <ProjectCard
-      title="Artificial Inteligence 1"
-      description="React + Django aplication to store shopping products and generating shoping list."
-      photo={spizarkaImage}
-      codeLink="https://github.com/MichalProtasiewicz/Spizarka"
-      liveLink="https://spizarkaa.herokuapp.com"
-    />
+    <ProjectsList/>
   </PageWrapper>
 );
 
