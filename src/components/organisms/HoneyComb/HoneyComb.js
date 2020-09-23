@@ -43,6 +43,11 @@ const HoneyCombGridWrapper = styled.div`
   top: 50%;
   left: 50%;
   margin-left: -150px;
+
+  @media (max-width: 300px) {
+    display: none;
+  }
+
   @media (min-width: 580px) {
     top: 53%;
     margin-left: -240px;
@@ -65,6 +70,7 @@ const HoneyCombWrapper = styled.div`
   position: absolute;
   height: 191px;
   width: 180px;
+  margin-bottom: 10px;
   ${({ first }) =>
     first &&
     css`
