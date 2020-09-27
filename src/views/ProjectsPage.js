@@ -10,7 +10,10 @@ const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 100vw;
+  width: -moz-calc(100vw - 7px);
+  width: -webkit-calc(100vw - 7px);
+  width: -o-calc(100vw - 7px);
+  width: calc(100vw - 7px);
   min-height: -moz-calc(100vh - 60px);
   min-height: -webkit-calc(100vh - 60px);
   min-height: -o-calc(100vh - 60px);
@@ -30,10 +33,10 @@ const PageWrapper = styled.div`
   @media (min-width: 950px) {
     justify-content: center;
     height: 100%;
-    width: -moz-calc(100vw - 60px);
-    width: -webkit-calc(100vw - 60px);
-    width: -o-calc(100vw - 60px);
-    width: calc(100vw - 60px);
+    width: -moz-calc(100vw - 67px);
+    width: -webkit-calc(100vw - 67px);
+    width: -o-calc(100vw - 67px);
+    width: calc(100vw - 67px);
   }
 `;
 

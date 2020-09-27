@@ -13,7 +13,7 @@ export const projects = [
   {
     title: 'Spizarka',
     description:
-      'React + Django aplication to store shopping products and generating shoping list.',
+      'React + Django app for saving, editing and removing shopping products and generating a shopping list.',
     photo: spizarkaImage,
     codeLink: 'https://github.com/MichalProtasiewicz/Spizarka',
     liveLink: 'https://spizarkaa.herokuapp.com',
@@ -21,65 +21,71 @@ export const projects = [
   {
     title: 'Healer Symulator',
     description:
-      'Unity mobile game. MMORPG Healer role implementation, for example like World of Warcraft.',
+      'MMORPG Healer role implementation on the example World of Warcraft created in Unity for the phone.',
     photo: healerSymulatorImage,
     codeLink: 'https://github.com/MichalProtasiewicz/Healer-Symulator',
     liveLink: 'https://play.google.com/store/apps/details?id=com.AchvenStudio.HealerSymulator',
   },
   {
-    title: 'VR Galery',
-    description: 'Unity application - museum with guider in Virtual Reality.',
+    title: 'VR Gallery',
+    description:
+      'VR Gallery is a platform that allows anyone to explore Virtual Reality exhibitions, providing an immersive experience like no other.',
     photo: galeryImage,
-    codeLink: 'https://github.com/MichalProtasiewicz/ArchitectVr',
+    codeLink: 'https://github.com/MichalProtasiewicz/GalleryVr',
     liveLink: '',
   },
   {
     title: 'VR Architect',
-    description: 'VR Application for real estate developers, made in Unity.',
+    description:
+      'VR Application for developers supporting contact with other people, giving them the opportunity to explore building in VR.',
     photo: architectImage,
     codeLink: 'https://github.com/MichalProtasiewicz/VR-Architect',
     liveLink: '',
   },
   {
     title: 'AR Copernikus',
-    description: 'Educational aplication with AR, made in Unity',
+    description:
+      'Educational aplication with AR for young people supporting understand the basic rules of mathematics and physics, made in Unity.',
     photo: copernikusImage,
     codeLink: 'https://github.com/MichalProtasiewicz/Kopernik',
     liveLink: '',
   },
   {
     title: 'Forest fire simulation',
-    description: 'Forest fire simulation, made in Unity.',
+    description:
+      'The main goal app is to determine how forest fires develop in different manners under specific conditions.',
     photo: fireSimulationImage,
     codeLink: 'https://github.com/MichalProtasiewicz/SymulacjaPozaruLasu',
     liveLink: '',
   },
   {
     title: 'Hero of Morrigan',
-    description: 'Platform rogue like game. ',
+    description: '2D platform game with gameplay elements popular for the subgenre Metroidvania.',
     photo: herroOfMorriganImage,
     codeLink: 'https://github.com/MichalProtasiewicz/HeroOfMorrigan',
     liveLink: '',
   },
   {
-    title: 'Artificial Inteligence 1',
-    description: 'Decision system',
-    photo: ai1Image,
-    codeLink: 'https://github.com/MichalProtasiewicz/ArtificialIntelligence1',
+    title: 'Artificial Inteligence 3',
+    description:
+      'Apriori algorithm is an algorithm for frequent item set mining and association rule learning over relational databases.',
+    photo: ai3Image,
+    codeLink: 'https://github.com/MichalProtasiewicz/ArtificialIntelligence3',
     liveLink: '',
   },
   {
     title: 'Artificial Inteligence 2',
-    description: 'Classifier.',
+    description:
+      'K Nearest Neighbor algorithm is a non-parametric method used for classification and regression.',
     photo: ai2Image,
     codeLink: 'https://github.com/MichalProtasiewicz/ArtificialIntelligence2',
     liveLink: '',
   },
   {
-    title: 'Artificial Inteligence 3',
-    description: 'Apriori algorithm and Association Rules.',
-    photo: ai3Image,
-    codeLink: 'https://github.com/MichalProtasiewicz/ArtificialIntelligence3',
+    title: 'Artificial Inteligence 1',
+    description: 'Decision system - application which one support users make a decisions.',
+    photo: ai1Image,
+    codeLink: 'https://github.com/MichalProtasiewicz/ArtificialIntelligence1',
     liveLink: '',
   },
 ];

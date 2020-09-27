@@ -2,6 +2,22 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
 
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #6d6d6d;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    background: #0679c1;
+}
+
   *, *::before, *::after {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
