@@ -62,16 +62,14 @@ const AboutPage = () => (
       <StyledHeading>About me</StyledHeading>
       <CodeText>&lt;/h1&gt;</CodeText>
       <StyledParagraph>
-        I am young and calm person, who is constantly educating.
-        <br />
-        As befits a well-prospecting developer, I&apos;m mainly interested in programming and
-        technology, but because of that man doesn’t live by programming alone, I also like watching
-        TV series, playing games and traveling (mountain hiking in summer gives me the greatest
-        joy). <br />
-        From a certain date, I’m also interested in economics, cryptocurrencies and stock market
-        analysis.
-        <br />
-        Additionally, in my spare time, I read books, mostly of the fantasy genre.
+        Since I was a child, I have been interested in IT, but I started programming more
+        professionally during my studies in 2015. I&apos;m a young, quiet person who&apos;s
+        constantly self-educated. As befits a prospective developer, I&apos;m mainly interested in
+        programming and technology, but because of the fact that it&apos;s not programming itself
+        that people are alive, I still like to watch series, play games and travel (mountain hiking
+        in the summer makes me most happy). For some time now I have also been interested in
+        economics, cryptocurrencies and stock market analysis. Additionally, in my free time I read
+        books, mainly fantasy genre.
       </StyledParagraph>
     </Wrapper>
   </PageWrapper>

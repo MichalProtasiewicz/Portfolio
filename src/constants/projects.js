@@ -45,7 +45,7 @@ export const projects = [
   {
     title: 'AR Copernikus',
     description:
-      'Educational aplication with AR for young people supporting understand the basic rules of mathematics and physics, made in Unity.',
+      'Educational AR aplication for young people supporting understand the basic rules of mathematics and physics.',
     photo: copernikusImage,
     codeLink: 'https://github.com/MichalProtasiewicz/Kopernik',
     liveLink: '',

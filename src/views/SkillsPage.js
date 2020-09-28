@@ -64,12 +64,11 @@ const SkillsPage = () => (
       <StyledHeading>My skills</StyledHeading>
       <CodeText>&lt;/h1&gt;</CodeText>
       <StyledParagraph>
-        Od dziecka interesowałem się programowaniem jednak bardziej profesjonalnym programowaniem
-        zająłem się od 2015 roku. Dotychczas największe doświadczenie zdobyłem pracując jako
-        freelancer Unity developer, tworząc aplikacje VR i AR. Po poznaniu wielu scieżek IT,
-        zdecydowałem się na Frontend. Posiadam również wiedzę z Backendu, więc potrafię stworzyć
-        aplikację z bazą danych i responsywnym oraz przyjemnym dla użytkownika interfejsem. (server
-        side and client side of the web)
+        I have always been interested in computer science and so far I have learnt many paths of
+        development in IT. For some time I worked as a Unity developer, mainly creating VR and AR
+        applications. I&apos;m currently working on the Frontend. I also have a Backend knowledge so
+        I can create an application with a database, a responsive and user-friendly interface
+        (server side and client side of the web).
       </StyledParagraph>
     </Wrapper>
     <HoneyComb />
