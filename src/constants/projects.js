@@ -37,7 +37,7 @@ export const projects = [
   {
     title: 'VR Architect',
     description:
-      'VR Application for developers supporting contact with other people, giving them the opportunity to explore building in VR.',
+      'VR Application for developers supports a contact with other people, gives them the opportunity to explore building in VR.',
     photo: architectImage,
     codeLink: 'https://github.com/MichalProtasiewicz/VR-Architect',
     liveLink: '',
@@ -45,7 +45,7 @@ export const projects = [
   {
     title: 'AR Copernikus',
     description:
-      'Educational AR aplication for young people supporting understand the basic rules of mathematics and physics.',
+      'Educational AR application for young people help to understand the basic rules of mathematics and physics.',
     photo: copernikusImage,
     codeLink: 'https://github.com/MichalProtasiewicz/Kopernik',
     liveLink: '',
@@ -53,7 +53,7 @@ export const projects = [
   {
     title: 'Forest fire simulation',
     description:
-      'The main goal app is to determine how forest fires develop in different manners under specific conditions.',
+      'The main app\'s goal is to determine how forest fires develop in different manners under specific conditions.',
     photo: fireSimulationImage,
     codeLink: 'https://github.com/MichalProtasiewicz/SymulacjaPozaruLasu',
     liveLink: '',
@@ -83,7 +83,7 @@ export const projects = [
   },
   {
     title: 'Artificial Inteligence 1',
-    description: 'Decision system - application which one support users make a decisions.',
+    description: 'Decision system - application, which supports users in making decisions.',
     photo: ai1Image,
     codeLink: 'https://github.com/MichalProtasiewicz/ArtificialIntelligence1',
     liveLink: '',

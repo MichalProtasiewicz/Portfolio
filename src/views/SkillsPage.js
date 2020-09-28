@@ -64,11 +64,11 @@ const SkillsPage = () => (
       <StyledHeading>My skills</StyledHeading>
       <CodeText>&lt;/h1&gt;</CodeText>
       <StyledParagraph>
-        I have always been interested in computer science and so far I have learnt many paths of
-        development in IT. For some time I worked as a Unity developer, mainly creating VR and AR
-        applications. I&apos;m currently working on the Frontend. I also have a Backend knowledge so
-        I can create an application with a database, a responsive and user-friendly interface
-        (server side and client side of the web).
+        I have been interested in IT all along and so far I have known many career paths in the
+        field. I worked as a Unity developer, mainly creating VR and AR applications. Currently I am
+        dealing with Frontend. I also have knowledge of Backend, so I can create an application with
+        a database and a responsive, user-friendly interface (server side and client side of the
+        web).
       </StyledParagraph>
     </Wrapper>
     <HoneyComb />
