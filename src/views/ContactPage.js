@@ -142,7 +142,7 @@ const ContactPage = () => {
         <StyledHeading>Contact me</StyledHeading>
         <CodeText>&lt;/h1&gt;</CodeText>
         <StyledParagraph>
-          You can find me in many places.&nbsp;
+          You can find me in many places-&nbsp;
           <StyledLink to={routes.github}>Github</StyledLink>,&nbsp;
           <StyledLink to={routes.linkedin}>Linkedin</StyledLink>,&nbsp;
           <StyledLink to={routes.telegram}>Telegram</StyledLink>. <br />
