@@ -29,13 +29,7 @@ const Wrapper = styled.div`
 const ProjectsList = () => (
   <Wrapper>
     {projects.map((project) => (
-      <ProjectCard
-        title={project.title}
-        description={project.description}
-        photo={project.photo}
-        codeLink={project.codeLink}
-        liveLink={project.liveLink}
-      />
+      <ProjectCard key={project.title} {...project} />
     ))}
   </Wrapper>
 );
