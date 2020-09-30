@@ -39,19 +39,15 @@ const PageWrapper = styled.div`
   @media (min-width: 950px) {
     padding: 125px 90px 125px 90px;
   }
-
   @media (min-width: 950px) {
-    justify-content: center;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
     height: 100%;
     width: -moz-calc(100vw - 67px);
     width: -webkit-calc(100vw - 67px);
     width: -o-calc(100vw - 67px);
     width: calc(100vw - 67px);
-  }
-  @media (min-width: 950px) {
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
   }
 `;
 

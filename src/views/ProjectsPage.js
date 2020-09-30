@@ -28,9 +28,6 @@ const PageWrapper = styled.div`
   }
   @media (min-width: 950px) {
     padding: 125px 90px 125px 90px;
-  }
-
-  @media (min-width: 950px) {
     justify-content: center;
     height: 100%;
     width: -moz-calc(100vw - 67px);

@@ -6,7 +6,10 @@ import Logo from 'components/molecules/Logo/Logo';
 
 const PageWrapper = styled.div`
   padding: 13% 7% 13% 7%;
-  width: 100vw;
+  width: -moz-calc(100vw - 7px);
+  width: -webkit-calc(100vw - 7px);
+  width: -o-calc(100vw - 7px);
+  width: calc(100vw - 7px);
   min-height: -moz-calc(100vh - 60px);
   min-height: -webkit-calc(100vh - 60px);
   min-height: -o-calc(100vh - 60px);
@@ -20,10 +23,10 @@ const PageWrapper = styled.div`
   @media (min-width: 950px) {
     height: 100%;
     padding: 125px 90px 125px 90px;
-    width: -moz-calc(100vw - 60px);
-    width: -webkit-calc(100vw - 60px);
-    width: -o-calc(100vw - 60px);
-    width: calc(100vw - 60px);
+    width: -moz-calc(100vw - 67px);
+    width: -webkit-calc(100vw - 67px);
+    width: -o-calc(100vw - 67px);
+    width: calc(100vw - 67px);
   }
   @media (min-width: 1250px) {
     column-gap: 40px;
@@ -32,35 +35,24 @@ const PageWrapper = styled.div`
   }
   @media (min-width: 1300px) {
     grid-template-columns: 0.7fr 0.3fr;
+    grid-template-rows: 1fr;
   }
   @media (min-width: 1410px) {
     grid-template-columns: 0.6fr 0.4fr;
+    grid-template-rows: 1fr;
   }
 `;
 
 const StyledLogo = styled(Logo)`
-  margin-bottom: 100px;
-  grid-column: 2;
-  justify-self: center;
-  align-self: center;
-  @media (min-width: 900px) {
-    width: 125%;
-    height: 125%;
-    margin-bottom: 0px;
-  }
 
-  @media (min-width: 1250px) {
-    grid-row: 1;
-    grid-column: 2;
-    width: 90%;
-    height: 90%;
-  }
 `;
 
 const HeaderWrapping = styled.div`
+  grid-row: 2;
   grid-column: 1/3;
   @media (min-width: 1250px) {
     grid-column: 1;
+    grid-row:1;
     align-self: center;
   }
 `;
