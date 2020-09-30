@@ -43,28 +43,13 @@ const PageWrapper = styled.div`
   }
 `;
 
-const StyledLogo = styled(Logo)`
-
-`;
-
 const HeaderWrapping = styled.div`
   grid-row: 2;
   grid-column: 1/3;
+  align-self: center;
   @media (min-width: 1250px) {
     grid-column: 1;
-    grid-row:1;
-    align-self: center;
-  }
-`;
-
-const StyledHeading = styled(Heading)`
-  padding-left: 7px;
-  color: ${({ theme }) => theme.white};
-  @media (max-width: 460px) {
-    font-size: ${({ theme }) => theme.fontSize.xm};
-  }
-  @media (max-width: 360px) {
-    font-size: 28px;
+    grid-row: 1;
   }
 `;
 
@@ -74,16 +59,17 @@ const StyledSpan = styled.span`
 
 const MainPage = () => (
   <PageWrapper>
-    <StyledLogo />
+    <Logo />
     <HeaderWrapping>
       <CodeText>&lt;h1&gt;</CodeText>
-      <StyledHeading>
+      <Heading mainPage>
         Hello,
         <br />
         I&apos;m <StyledSpan>Michał</StyledSpan>,<br /> front end developer.
-      </StyledHeading>
+      </Heading>
       <CodeText>&lt;/h1&gt;</CodeText>
     </HeaderWrapping>
   </PageWrapper>
 );
+
 export default MainPage;

@@ -39,15 +39,11 @@ const PageWrapper = styled.div`
 
 const Wrapper = styled.div``;
 
-const StyledHeading = styled(Heading)`
-  padding-left: 10px;
-`;
-
 const ProjectsPage = () => (
   <PageWrapper>
     <Wrapper>
       <CodeText>&lt;h1&gt;</CodeText>
-      <StyledHeading>My projects</StyledHeading>
+      <Heading>My projects</Heading>
       <CodeText>&lt;/h1&gt;</CodeText>
     </Wrapper>
     <ProjectsList/>

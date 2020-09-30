@@ -40,7 +40,7 @@ import { ReactComponent as FigmaIcon } from 'assets/icons/figma.svg';
 
 const HoneyCombGridWrapper = styled.div`
   position: relative;
-  top: 50%;
+  top: 50px;
   left: 50%;
   margin-left: -150px;
 
@@ -49,7 +49,6 @@ const HoneyCombGridWrapper = styled.div`
   }
 
   @media (min-width: 580px) {
-    top: 53%;
     margin-left: -240px;
   }
   @media (min-width: 950px) {

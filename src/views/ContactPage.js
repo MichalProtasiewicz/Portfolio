@@ -53,10 +53,6 @@ const PageWrapper = styled.div`
 
 const Wrapper = styled.div``;
 
-const StyledHeading = styled(Heading)`
-  padding-left: 10px;
-`;
-
 const StyledParagraph = styled(Paragraph)`
   width: 95%;
   @media (min-width: 950px) {
@@ -135,7 +131,7 @@ const ContactPage = () => {
       )}
       <Wrapper>
         <CodeText>&lt;h1&gt;</CodeText>
-        <StyledHeading>Contact me</StyledHeading>
+        <Heading>Contact me</Heading>
         <CodeText>&lt;/h1&gt;</CodeText>
         <StyledParagraph>
           You can find me in many places:&nbsp;

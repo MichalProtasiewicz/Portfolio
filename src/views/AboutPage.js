@@ -48,15 +48,11 @@ const StyledParagraph = styled(Paragraph)`
   max-width: 580px;
 `;
 
-const StyledHeading = styled(Heading)`
-  padding-left: 10px;
-`;
-
 const AboutPage = () => (
   <PageWrapper>
     <Wrapper>
       <CodeText>&lt;h1&gt;</CodeText>
-      <StyledHeading>About me</StyledHeading>
+      <Heading>About me</Heading>
       <CodeText>&lt;/h1&gt;</CodeText>
       <StyledParagraph>
         I have been interested in IT since I was a child, but I have dealt with more professional

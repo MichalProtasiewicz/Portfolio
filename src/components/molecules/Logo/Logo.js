@@ -52,13 +52,13 @@ const Logo = () => {
       transformOrigin: '0% 0%',
     });
 
-    const tl = gsap.timeline({ defaults: { ease: 'power4.in' } });
+    const tl = gsap.timeline({delay: 1, defaults: { ease: 'power4.in' } });
 
     tl.fromTo(letterM, {}, { duration: 1, scale: 1, autoAlpha: 1 })
       .fromTo(letterP, {}, { duration: 1, scale: 1, autoAlpha: 1 }, '-=0.5')
       .fromTo(circle, {}, { duration: 2, scale: 1, autoAlpha: 1 })
       .fromTo(border, {}, { duration: 2, scale: 1, autoAlpha: 1 }, '-=2')
-      .fromTo(cracks, { scale: 1 }, { duration: 0.001, scale: 1, autoAlpha: 1 });
+      .fromTo(cracks, { scale: 0.9 }, { duration: 0.001, scale: 1, autoAlpha: 1 });
   }, []);
   return (
     <Wrapper ref={logoWrapper}>

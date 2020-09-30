@@ -45,10 +45,6 @@ const PageWrapper = styled.div`
 const Wrapper = styled.div`
 `;
 
-const StyledHeading = styled(Heading)`
-  padding-left: 10px;
-`;
-
 const StyledParagraph = styled(Paragraph)`
   width: 100%;
   max-width: 580px;
@@ -58,7 +54,7 @@ const SkillsPage = () => (
   <PageWrapper>
     <Wrapper>
       <CodeText>&lt;h1&gt;</CodeText>
-      <StyledHeading>My skills</StyledHeading>
+      <Heading>My skills</Heading>
       <CodeText>&lt;/h1&gt;</CodeText>
       <StyledParagraph>
         I have been interested in IT all along and so far I have known many career paths in the
