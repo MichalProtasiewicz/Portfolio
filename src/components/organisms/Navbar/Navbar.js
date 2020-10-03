@@ -60,7 +60,15 @@ const NavList = styled.ul`
   }
 `;
 
-const HomeNavLink = styled(NavLink)`
+const StyledNavLink = styled(NavLink)`
+  &.active {
+    button:first-of-type {
+      color: ${({ theme }) => theme.blue};
+    }
+  }
+`;
+
+const HomeNavLink = styled(StyledNavLink)`
   display: none;
 
   @media (min-width: 380px) {
@@ -112,26 +120,26 @@ const Navbar = () => {
             <HomeOutlinedIcon style={{ fontSize: 35 }} />
           </NavbarButtonIcon>
         </HomeNavLink>
-        <NavLink to={routes.about}>
+        <StyledNavLink to={routes.about}>
           <NavbarButtonIcon>
             <FaceOutlinedIcon style={{ fontSize: 35 }} />
           </NavbarButtonIcon>
-        </NavLink>
-        <NavLink to={routes.skills}>
+        </StyledNavLink>
+        <StyledNavLink to={routes.skills}>
           <NavbarButtonIcon>
             <SchoolOutlinedIcon style={{ fontSize: 35 }} />
           </NavbarButtonIcon>
-        </NavLink>
-        <NavLink to={routes.projects}>
+        </StyledNavLink>
+        <StyledNavLink to={routes.projects}>
           <NavbarButtonIcon>
             <BusinessCenterOutlinedIcon style={{ fontSize: 35 }} />
           </NavbarButtonIcon>
-        </NavLink>
-        <NavLink to={routes.contact}>
+        </StyledNavLink>
+        <StyledNavLink to={routes.contact}>
           <NavbarButtonIcon>
             <EmailOutlinedIcon style={{ fontSize: 35 }} />
           </NavbarButtonIcon>
-        </NavLink>
+        </StyledNavLink>
       </NavList>
       <SocialList>
         <a target="_blank" rel="noreferrer" href={routes.linkedin}>
