@@ -46,7 +46,7 @@ const PageWrapper = styled.div`
 
 const Wrapper = styled.div``;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   color: ${({ theme }) => theme.blue};
   text-decoration: none;
 `;
@@ -59,9 +59,18 @@ const ContactPage = () => (
       <CodeText>&lt;/h1&gt;</CodeText>
       <Paragraph>
         You can find me in many places:&nbsp;
-        <StyledLink to={routes.github}>Github</StyledLink>,&nbsp;
-        <StyledLink to={routes.linkedin}>Linkedin</StyledLink>,&nbsp;
-        <StyledLink to={routes.telegram}>Telegram</StyledLink>. <br />
+        <StyledLink target="_blank" rel="noreferrer" href={routes.github}>
+          Github
+        </StyledLink>
+        ,&nbsp;
+        <StyledLink target="_blank" rel="noreferrer" href={routes.linkedin}>
+          Linkedin
+        </StyledLink>
+        ,&nbsp;
+        <StyledLink target="_blank" rel="noreferrer" href={routes.telegram}>
+          Telegram
+        </StyledLink>
+        . <br />
         I am interested in all kind of employment, expecially permament. <br />
         However, if u have other request or question, don’t hestitate to contact me using below form
         either.
