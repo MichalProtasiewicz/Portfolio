@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { routes } from 'routes';
 import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
