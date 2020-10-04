@@ -38,8 +38,8 @@ const StyledH1 = styled.h1`
 const Heading = ({ children, mainPage }) => {
   const header = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline({ defaults: { ease: 'power4.in' } });
-    tl.fromTo(header.current, { autoAlpha: 0 }, { duration: 1, autoAlpha: 1 });
+    const tl = gsap.timeline({ defaults: { ease: 'power1.easeInOut' } });
+    tl.fromTo(header.current, { autoAlpha: 0, x:30 }, { duration: 1, autoAlpha: 1, x:0 });
   }, []);
   return (
     <StyledH1 mainPage={mainPage} ref={header}>

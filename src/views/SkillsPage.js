@@ -45,24 +45,19 @@ const PageWrapper = styled.div`
 const Wrapper = styled.div`
 `;
 
-const StyledParagraph = styled(Paragraph)`
-  width: 100%;
-  max-width: 580px;
-`;
-
 const SkillsPage = () => (
   <PageWrapper>
     <Wrapper>
       <CodeText>&lt;h1&gt;</CodeText>
       <Heading>My skills</Heading>
       <CodeText>&lt;/h1&gt;</CodeText>
-      <StyledParagraph>
+      <Paragraph>
         I have been interested in IT all along and so far I have known many career paths in the
         field. I worked as a Unity developer, mainly creating VR and AR applications. Currently I am
         dealing with Frontend. I also have knowledge of Backend, so I can create an application with
         a database and a responsive, user-friendly interface (server side and client side of the
         web).
-      </StyledParagraph>
+      </Paragraph>
     </Wrapper>
     <HoneyComb />
   </PageWrapper>

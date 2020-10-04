@@ -43,18 +43,13 @@ const PageWrapper = styled.div`
 
 const Wrapper = styled.div``;
 
-const StyledParagraph = styled(Paragraph)`
-  width: 100%;
-  max-width: 580px;
-`;
-
 const AboutPage = () => (
   <PageWrapper>
     <Wrapper>
       <CodeText>&lt;h1&gt;</CodeText>
       <Heading>About me</Heading>
       <CodeText>&lt;/h1&gt;</CodeText>
-      <StyledParagraph>
+      <Paragraph>
         I have been interested in IT since I was a child, but I have dealt with more professional
         programming since 2015, when I started my studies. I am a young, calm person whose aim is to
         continuous self-educate. As an up-and-coming developer, I am mainly interested in
@@ -62,7 +57,7 @@ const AboutPage = () => (
         watching TV series, playing games and traveling (mountain hiking in the summer is my
         greatest joy). For some time, I have also been interested in economics, cryptocurrencies and
         stock market analysis. In addition, in my spare time I read books, mainly fantasy.
-      </StyledParagraph>
+      </Paragraph>
     </Wrapper>
   </PageWrapper>
 );

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled, { css } from 'styled-components';
+import gsap from 'gsap';
 import SkillComb from 'components/atoms/SkillComb/SkillComb';
 
 import { ReactComponent as HtmlIcon } from 'assets/icons/html5.svg';
@@ -39,6 +40,7 @@ import { ReactComponent as AdobeXdIcon } from 'assets/icons/adobexd.svg';
 import { ReactComponent as FigmaIcon } from 'assets/icons/figma.svg';
 
 const HoneyCombGridWrapper = styled.div`
+  opacity: 0;
   position: relative;
   top: 50px;
   left: 50%;
@@ -208,7 +210,6 @@ const SkillComb1 = styled(SkillComb)`
     left: 92.25px;
   }
 `;
-
 const SkillComb2 = styled(SkillComb)`
   top: 0px;
   left: 72px;
@@ -258,128 +259,139 @@ const SkillComb7 = styled(SkillComb)`
   }
 `;
 
-const HoneyComb = () => (
-  <HoneyCombGridWrapper>
-    <HoneyCombWrapper first>
-      <SkillComb1 color="#E34F26">
-        <HtmlIcon width={50} height={50} />
-      </SkillComb1>
-      <SkillComb2 color="#1572B6">
-        <CssIcon width={50} height={50} />
-      </SkillComb2>
-      <SkillComb3 color="#F7DF1E">
-        <JsIcon width={50} height={50} />
-      </SkillComb3>
-      <SkillComb4 color="#61DAFB">
-        <ReactIcon width={50} height={50} />
-      </SkillComb4>
-      <SkillComb5 color="#DD0031">
-        <AngularIcon width={50} height={50} />
-      </SkillComb5>
-      <SkillComb6 color="#4FC08D">
-        <VueIcon width={50} height={50} />
-      </SkillComb6>
-      <SkillComb7 color="#339933">
-        <NodeJsIcon width={50} height={50} />
-      </SkillComb7>
-    </HoneyCombWrapper>
+const HoneyComb = () => {
+  const wrapper = useRef(null);
+  useEffect(() => {
+    const tl = gsap.timeline({delay: 0.3 ,defaults: { ease: 'power4.easeOut' } });
+    tl.fromTo(
+      wrapper.current,
+      { autoAlpha: 0},
+      { duration: 2.5, autoAlpha: 1 },
+    );
+  }, []);
+  return (
+    <HoneyCombGridWrapper ref={wrapper}>
+      <HoneyCombWrapper first>
+        <SkillComb1 color="#E34F26">
+          <HtmlIcon width={50} height={50} />
+        </SkillComb1>
+        <SkillComb2 color="#1572B6">
+          <CssIcon width={50} height={50} />
+        </SkillComb2>
+        <SkillComb3 color="#F7DF1E">
+          <JsIcon width={50} height={50} />
+        </SkillComb3>
+        <SkillComb4 color="#61DAFB">
+          <ReactIcon width={50} height={50} />
+        </SkillComb4>
+        <SkillComb5 color="#DD0031">
+          <AngularIcon width={50} height={50} />
+        </SkillComb5>
+        <SkillComb6 color="#4FC08D">
+          <VueIcon width={50} height={50} />
+        </SkillComb6>
+        <SkillComb7 color="#339933">
+          <NodeJsIcon width={50} height={50} />
+        </SkillComb7>
+      </HoneyCombWrapper>
 
-    <HoneyCombWrapper second>
-      <SkillComb1 color="#764ABC">
-        <ReduxIcon width={50} height={50} />
-      </SkillComb1>
-      <SkillComb2 color="#FF4785">
-        <StorybookIcon width={50} height={50} />
-      </SkillComb2>
-      <SkillComb3 color="#C21325">
-        <JestIcon width={50} height={50} />
-      </SkillComb3>
-      <SkillComb4 color="#E10098">
-        <GraphqlIcon width={50} height={50} />
-      </SkillComb4>
-      <SkillComb5 color="#311C87">
-        <ApolloIcon width={50} height={50} />
-      </SkillComb5>
-      <SkillComb6 color="#663399">
-        <GatsbyIcon width={50} height={50} />
-      </SkillComb6>
-      <SkillComb7 color="#CC6699">
-        <SassIcon width={50} height={50} />
-      </SkillComb7>
-    </HoneyCombWrapper>
+      <HoneyCombWrapper second>
+        <SkillComb1 color="#764ABC">
+          <ReduxIcon width={50} height={50} />
+        </SkillComb1>
+        <SkillComb2 color="#FF4785">
+          <StorybookIcon width={50} height={50} />
+        </SkillComb2>
+        <SkillComb3 color="#C21325">
+          <JestIcon width={50} height={50} />
+        </SkillComb3>
+        <SkillComb4 color="#E10098">
+          <GraphqlIcon width={50} height={50} />
+        </SkillComb4>
+        <SkillComb5 color="#311C87">
+          <ApolloIcon width={50} height={50} />
+        </SkillComb5>
+        <SkillComb6 color="#663399">
+          <GatsbyIcon width={50} height={50} />
+        </SkillComb6>
+        <SkillComb7 color="#CC6699">
+          <SassIcon width={50} height={50} />
+        </SkillComb7>
+      </HoneyCombWrapper>
 
-    <HoneyCombWrapper third>
-      <SkillComb1 color="#3776AB">
-        <PythonIcon width={50} height={50} />
-      </SkillComb1>
-      <SkillComb2 color="#092E20">
-        <DjangoIcon width={50} height={50} />
-      </SkillComb2>
-      <SkillComb3 color="#4479A1">
-        <MysqlIcon width={50} height={50} />
-      </SkillComb3>
-      <SkillComb4 color="#5C2D91">
-        <NetIcon width={50} height={50} />
-      </SkillComb4>
-      <SkillComb5 color="#239120">
-        <CsharpIcon width={50} height={50} />
-      </SkillComb5>
-      <SkillComb6 color="#00599C">
-        <CplusplusIcon width={50} height={50} />
-      </SkillComb6>
-      <SkillComb7 color="#A8B9CC">
-        <CIcon width={50} height={50} />
-      </SkillComb7>
-    </HoneyCombWrapper>
+      <HoneyCombWrapper third>
+        <SkillComb1 color="#3776AB">
+          <PythonIcon width={50} height={50} />
+        </SkillComb1>
+        <SkillComb2 color="#092E20">
+          <DjangoIcon width={50} height={50} />
+        </SkillComb2>
+        <SkillComb3 color="#4479A1">
+          <MysqlIcon width={50} height={50} />
+        </SkillComb3>
+        <SkillComb4 color="#5C2D91">
+          <NetIcon width={50} height={50} />
+        </SkillComb4>
+        <SkillComb5 color="#239120">
+          <CsharpIcon width={50} height={50} />
+        </SkillComb5>
+        <SkillComb6 color="#00599C">
+          <CplusplusIcon width={50} height={50} />
+        </SkillComb6>
+        <SkillComb7 color="#A8B9CC">
+          <CIcon width={50} height={50} />
+        </SkillComb7>
+      </HoneyCombWrapper>
 
-    <HoneyCombWrapper fourth>
-      <SkillComb1 color="#000000">
-        <UnityIcon width={50} height={50} />
-      </SkillComb1>
-      <SkillComb2 color="#0679c1">
-        <VrIcon width={50} height={50} />
-      </SkillComb2>
-      <SkillComb3 color="#c43149">
-        <ArIcon width={50} height={50} />
-      </SkillComb3>
-      <SkillComb4 color="#36eb62">
-        <GsapIcon width={50} height={50} />
-      </SkillComb4>
-      <SkillComb5 color="#007ACC">
-        <VSCIcon width={50} height={50} />
-      </SkillComb5>
-      <SkillComb6 color="#5C2D91">
-        <VSIcon width={50} height={50} />
-      </SkillComb6>
-      <SkillComb7 color="#47A248">
-        <MongoIcon width={50} height={50} />
-      </SkillComb7>
-    </HoneyCombWrapper>
+      <HoneyCombWrapper fourth>
+        <SkillComb1 color="#000000">
+          <UnityIcon width={50} height={50} />
+        </SkillComb1>
+        <SkillComb2 color="#0679c1">
+          <VrIcon width={50} height={50} />
+        </SkillComb2>
+        <SkillComb3 color="#c43149">
+          <ArIcon width={50} height={50} />
+        </SkillComb3>
+        <SkillComb4 color="#36eb62">
+          <GsapIcon width={50} height={50} />
+        </SkillComb4>
+        <SkillComb5 color="#007ACC">
+          <VSCIcon width={50} height={50} />
+        </SkillComb5>
+        <SkillComb6 color="#5C2D91">
+          <VSIcon width={50} height={50} />
+        </SkillComb6>
+        <SkillComb7 color="#47A248">
+          <MongoIcon width={50} height={50} />
+        </SkillComb7>
+      </HoneyCombWrapper>
 
-    <HoneyCombWrapper fifth>
-      <SkillComb1 color="#31A8FF">
-        <PhotoshopIcon width={50} height={50} />
-      </SkillComb1>
-      <SkillComb2 color="#5C5543">
-        <GimpIcon width={50} height={50} />
-      </SkillComb2>
-      <SkillComb3 color="#0052CC">
-        <AtlassianIcon width={50} height={50} />
-      </SkillComb3>
-      <SkillComb4 color="#181717">
-        <GithubIcon width={50} height={50} />
-      </SkillComb4>
-      <SkillComb5 color="#F05032">
-        <GitIcon width={50} height={50} />
-      </SkillComb5>
-      <SkillComb6 color="#FF26BE">
-        <AdobeXdIcon width={50} height={50} />
-      </SkillComb6>
-      <SkillComb7 color="#F24E1E">
-        <FigmaIcon width={50} height={50} />
-      </SkillComb7>
-    </HoneyCombWrapper>
-  </HoneyCombGridWrapper>
-);
+      <HoneyCombWrapper fifth>
+        <SkillComb1 color="#31A8FF">
+          <PhotoshopIcon width={50} height={50} />
+        </SkillComb1>
+        <SkillComb2 color="#5C5543">
+          <GimpIcon width={50} height={50} />
+        </SkillComb2>
+        <SkillComb3 color="#0052CC">
+          <AtlassianIcon width={50} height={50} />
+        </SkillComb3>
+        <SkillComb4 color="#181717">
+          <GithubIcon width={50} height={50} />
+        </SkillComb4>
+        <SkillComb5 color="#F05032">
+          <GitIcon width={50} height={50} />
+        </SkillComb5>
+        <SkillComb6 color="#FF26BE">
+          <AdobeXdIcon width={50} height={50} />
+        </SkillComb6>
+        <SkillComb7 color="#F24E1E">
+          <FigmaIcon width={50} height={50} />
+        </SkillComb7>
+      </HoneyCombWrapper>
+    </HoneyCombGridWrapper>
+  );
+};
 
 export default HoneyComb;

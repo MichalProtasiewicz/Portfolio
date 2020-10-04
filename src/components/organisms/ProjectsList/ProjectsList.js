@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
 import ProjectCard from 'components/molecules/ProjectCard/ProjectCard';
 import { projects } from 'constants/projects';
 
 const Wrapper = styled.div`
+  opacity: 0;
   margin-top: 50px;
   width: 100%;
   display: grid;
@@ -26,13 +28,20 @@ const Wrapper = styled.div`
   }
 `;
 
-const ProjectsList = () => (
-  <Wrapper>
-    {projects.map((project) => (
-      <ProjectCard key={project.title} {...project} />
-    ))}
-  </Wrapper>
-);
+const ProjectsList = () => {
+  const wrapper = useRef(null);
+  useEffect(() => {
+    const tl = gsap.timeline({delay: 0.3 ,defaults: { ease: 'power4.easeOut' } });
+    tl.fromTo(wrapper.current, { autoAlpha: 0 }, { duration: 1.5, autoAlpha: 1 });
+  }, []);
+  return (
+    <Wrapper ref={wrapper}>
+      {projects.map((project) => (
+        <ProjectCard key={project.title} {...project} />
+      ))}
+    </Wrapper>
+  );
+};
 
 ProjectsList.propTypes = {};
 
