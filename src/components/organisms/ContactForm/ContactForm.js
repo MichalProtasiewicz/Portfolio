@@ -84,28 +84,28 @@ const ContactForm = () => {
 
   useEffect(() => {
     const tl = gsap.timeline({ delay: 0.3, defaults: { ease: 'power1.easeInOut' } });
-    tl.fromTo(inputName.current, { autoAlpha: 0, y: 500 }, { duration: 1, autoAlpha: 1, y: 0 })
+    tl.fromTo(inputName.current, { autoAlpha: 0, y: 100 }, { duration: 1, autoAlpha: 1, y: 0 })
       .fromTo(
         inputEmail.current,
-        { autoAlpha: 0, y: 500 },
+        { autoAlpha: 0, y: 100 },
         { duration: 1, autoAlpha: 1, y: 0 },
         '-=0.6',
       )
       .fromTo(
         inputSubject.current,
-        { autoAlpha: 0, y: 500 },
+        { autoAlpha: 0, y: 100 },
         { duration: 1, autoAlpha: 1, y: 0 },
         '-=0.7',
       )
       .fromTo(
         inputMessage.current,
-        { autoAlpha: 0, y: 500 },
+        { autoAlpha: 0, y: 100 },
         { duration: 1, autoAlpha: 1, y: 0 },
         '-=0.8',
       )
       .fromTo(
         button.current,
-        { autoAlpha: 0, y: 500 },
+        { autoAlpha: 0, y: 100 },
         { duration: 1, autoAlpha: 1, y: 0 },
         '-=0.9',
       );
