@@ -31,7 +31,7 @@ const Wrapper = styled.div`
 const ProjectsList = () => {
   const wrapper = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline({delay: 0.3 ,defaults: { ease: 'power4.easeOut' } });
+    const tl = gsap.timeline({delay: 1.3 ,defaults: { ease: 'power4.easeOut' } });
     tl.fromTo(wrapper.current, { autoAlpha: 0 }, { duration: 1.5, autoAlpha: 1 });
   }, []);
   return (

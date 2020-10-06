@@ -9,7 +9,7 @@ const StyledH1 = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.l};
   font-weight: bold;
   color: ${({ theme }) => theme.blue};
-  opacity: 0;
+
 
   @media (min-width: 540px) {
     font-size: ${({ theme }) => theme.fontSize.xl};
@@ -35,15 +35,31 @@ const StyledH1 = styled.h1`
     `}
 `;
 
+const SpanLetter = styled.span`
+  opacity: 0;
+`;
+
 const Heading = ({ children, mainPage }) => {
   const header = useRef(null);
+
+  const splitTextAray = [];
+  for (let i = 0; i < children.length; i++) {
+    if (typeof children[i] === 'string') {
+      splitTextAray.push(...children[i].split(''));
+    } else {
+      splitTextAray.push(children[i]);
+    }
+  }
+
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power1.easeInOut' } });
-    tl.fromTo(header.current, { autoAlpha: 0, x:30 }, { duration: 1, autoAlpha: 1, x:0 });
+    tl.to(header.current.children, { duration: 1, autoAlpha: 1, stagger: 0.1 });
   }, []);
   return (
     <StyledH1 mainPage={mainPage} ref={header}>
-      {children}
+      {splitTextAray.map((letter, id) => (
+        <SpanLetter key={id}>{letter}</SpanLetter>
+      ))}
     </StyledH1>
   );
 };

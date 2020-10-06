@@ -83,7 +83,7 @@ const ContactForm = () => {
   const button = useRef(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 0.3, defaults: { ease: 'power1.easeInOut' } });
+    const tl = gsap.timeline({ delay: 1.3, defaults: { ease: 'power1.easeInOut' } });
     tl.fromTo(inputName.current, { autoAlpha: 0, y: 100 }, { duration: 1, autoAlpha: 1, y: 0 })
       .fromTo(
         inputEmail.current,

@@ -262,11 +262,11 @@ const SkillComb7 = styled(SkillComb)`
 const HoneyComb = () => {
   const wrapper = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline({delay: 0.3 ,defaults: { ease: 'power4.easeOut' } });
+    const tl = gsap.timeline({delay: 1.3 ,defaults: { ease: 'power4.easeOut' } });
     tl.fromTo(
       wrapper.current,
       { autoAlpha: 0},
-      { duration: 2.5, autoAlpha: 1 },
+      { duration: 2, autoAlpha: 1 },
     );
   }, []);
   return (

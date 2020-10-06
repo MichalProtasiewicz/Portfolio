@@ -33,7 +33,7 @@ const SocialButtons = () => {
   const wrapper = useRef(null);
   useEffect(() => {
     const tl = gsap.timeline({delay: 2.5 ,defaults: { ease: 'power4.easeOut' } });
-    tl.fromTo(wrapper.current, { autoAlpha: 0 }, { duration: 2, autoAlpha: 1 });
+    tl.fromTo(wrapper.current, { autoAlpha: 0 }, { duration: 1.5, autoAlpha: 1 });
   }, []);
   return (
     <SocialButtonsWrapper ref={wrapper}>

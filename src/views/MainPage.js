@@ -63,8 +63,7 @@ const MainPage = () => (
     <HeaderWrapping>
       <CodeText>&lt;h1&gt;</CodeText>
       <Heading mainPage>
-        Hello,
-        <br />
+        Hello, <br />
         I&apos;m <StyledSpan>Michał</StyledSpan>,<br /> front end developer.
       </Heading>
       <CodeText>&lt;/h1&gt;</CodeText>

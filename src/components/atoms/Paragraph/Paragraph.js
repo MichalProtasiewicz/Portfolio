@@ -19,8 +19,8 @@ const StyledP = styled.p`
 const Paragraph = ({ children }) => {
   const paragraph = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline({defaults: { ease: 'power1.easeInOut' } });
-    tl.fromTo(paragraph.current, { autoAlpha: 0, x: 30, y: 10 }, { duration: 1, autoAlpha: 1, x: 0, y: 0 });
+    const tl = gsap.timeline({ delay: 1, defaults: { ease: 'power1.easeInOut' } });
+    tl.fromTo(paragraph.current, { autoAlpha: 0, x: 50 }, { duration: 1, autoAlpha: 1, x: 0 });
   }, []);
   return <StyledP ref={paragraph}>{children}</StyledP>;
 };
