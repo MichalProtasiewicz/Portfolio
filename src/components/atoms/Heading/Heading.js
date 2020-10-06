@@ -37,6 +37,11 @@ const StyledH1 = styled.h1`
 
 const SpanLetter = styled.span`
   opacity: 0;
+  transition: 0.2s ease all;
+  &:hover {
+    color: ${({ theme, mainPage }) => (mainPage ? theme.blue : theme.white)};
+    text-shadow: 3px -3px ${({ theme, mainPage }) => (mainPage ? theme.gray20 : theme.gray20)};
+  }
 `;
 
 const Heading = ({ children, mainPage }) => {
@@ -58,7 +63,9 @@ const Heading = ({ children, mainPage }) => {
   return (
     <StyledH1 mainPage={mainPage} ref={header}>
       {splitTextAray.map((letter, id) => (
-        <SpanLetter key={id}>{letter}</SpanLetter>
+        <SpanLetter key={id} mainPage={mainPage}>
+          {letter}
+        </SpanLetter>
       ))}
     </StyledH1>
   );
