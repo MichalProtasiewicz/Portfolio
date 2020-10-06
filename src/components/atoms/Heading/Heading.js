@@ -9,7 +9,10 @@ const StyledH1 = styled.h1`
   font-size: ${({ theme }) => theme.fontSize.l};
   font-weight: bold;
   color: ${({ theme }) => theme.blue};
-
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 
   @media (min-width: 540px) {
     font-size: ${({ theme }) => theme.fontSize.xl};
