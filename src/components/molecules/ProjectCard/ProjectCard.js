@@ -6,6 +6,7 @@ import CodeIcon from '@material-ui/icons/Code';
 import PublicIcon from '@material-ui/icons/Public';
 
 const Wrapper = styled.div`
+  opacity: 0;
   width: 100%;
   max-width: 300px;
   height: 375px;
