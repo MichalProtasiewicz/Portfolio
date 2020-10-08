@@ -5,7 +5,6 @@ import ProjectCard from 'components/molecules/ProjectCard/ProjectCard';
 import { projects } from 'constants/projects';
 
 const Wrapper = styled.div`
-  opacity: 0;
   margin-top: 50px;
   width: 100%;
   display: grid;
@@ -31,8 +30,12 @@ const Wrapper = styled.div`
 const ProjectsList = () => {
   const wrapper = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline({delay: 1.3 ,defaults: { ease: 'power4.easeOut' } });
-    tl.fromTo(wrapper.current, { autoAlpha: 0 }, { duration: 1.5, autoAlpha: 1 });
+    const tl = gsap.timeline({ delay: 1.3, defaults: { ease: 'power4.easeOut' } });
+    tl.fromTo(
+      wrapper.current.children,
+      { autoAlpha: 0, x:50},
+      { duration: 2, autoAlpha: 1, x:0, stagger: 0.2 },
+    );
   }, []);
   return (
     <Wrapper ref={wrapper}>
