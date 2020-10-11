@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import cartonPhoto from 'assets/cartonPhoto.gif';
 
 const StyledImg = styled.img`
+  opacity: 0;
   position: absolute;
   bottom: 0px;
   right: 0;
