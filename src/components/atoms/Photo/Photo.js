@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styled from 'styled-components';
+import gsap from 'gsap';
 import cartonPhoto from 'assets/cartonPhoto.gif';
 
 const StyledImg = styled.img`
@@ -26,8 +27,17 @@ const StyledImg = styled.img`
   }
 `;
 
-const Photo = () => (
-  <StyledImg src={cartonPhoto}/>
-)
+const Photo = () => {
+  const photo = useRef(null);
 
+  useEffect(() => {
+    const tl = gsap.timeline({ defaults: { delay: 1.5, ease: 'power1.easeInOut' } });
+    tl.fromTo(photo.current.children, { autoAlpha: 0 }, { duration: 2, autoAlpha: 1 });
+  }, []);
+  return (
+    <div ref={photo}>
+      <StyledImg src={cartonPhoto} />
+    </div>
+  );
+};
 export default Photo;
