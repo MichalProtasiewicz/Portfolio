@@ -1,0 +1,33 @@
+import React from 'react';
+import styled from 'styled-components';
+import cartonPhoto from 'assets/cartonPhoto.gif';
+
+const StyledImg = styled.img`
+  position: absolute;
+  bottom: 0px;
+  right: 0;
+  height: 200px;
+  width: 300px;
+  @media (min-width: 450px) {
+    height: 300px;
+    width: 450px;
+  }
+  @media (min-width: 750px) {
+    height: 400px;
+    width: 600px;
+  }
+  @media (min-width: 1400px) {
+    height: 500px;
+    width: 750px;
+  }
+  @media (min-width: 1700px) {
+    height: 600px;
+    width: 900px;
+  }
+`;
+
+const Photo = () => (
+  <StyledImg src={cartonPhoto}/>
+)
+
+export default Photo;

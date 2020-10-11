@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import CodeText from 'components/atoms/CodeText/CodeText';
 import Heading from 'components/atoms/Heading/Heading';
 import Paragraph from 'components/atoms/Paragraph/Paragraph';
+import Photo from 'components/atoms/Photo/Photo';
 
 const PageWrapper = styled.div`
   padding: 13% 7% 13% 7%;
@@ -43,13 +44,14 @@ const PageWrapper = styled.div`
 
 const Wrapper = styled.div``;
 
+
 const AboutPage = () => (
   <PageWrapper>
     <Wrapper>
       <CodeText>&lt;h1&gt;</CodeText>
       <Heading>About me</Heading>
       <CodeText>&lt;/h1&gt;</CodeText>
-      <Paragraph>
+      <Paragraph aboutPage>
         I have been interested in IT since I was a child, but I have dealt with more professional
         programming since 2015, when I started my studies. I am a young, calm person whose aim is to
         continuous self-educate. As an up-and-coming developer, I am mainly interested in
@@ -59,6 +61,7 @@ const AboutPage = () => (
         stock market analysis. In addition, in my spare time I read books, mainly fantasy.
       </Paragraph>
     </Wrapper>
+    <Photo />
   </PageWrapper>
 );
 
