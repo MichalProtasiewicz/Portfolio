@@ -1,1 +1,1 @@
-Live: https://portfolio-mp.herokuapp.com/home
+Live: https://portfolio-mp.herokuapp.com
