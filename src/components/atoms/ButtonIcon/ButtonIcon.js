@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const ButtonIcon = styled.button`
+  cursor: pointer;
   display: block;
   padding: 0;
   width: 35px;

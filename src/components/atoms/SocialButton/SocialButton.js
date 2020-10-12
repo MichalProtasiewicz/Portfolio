@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
 
 const SocialButton = styled.button`
+  cursor: pointer;
   color: ${({ theme }) => theme.gray50};
   position: relative;
   display: block;
