@@ -61,7 +61,7 @@ const Heading = ({ children, mainPage }) => {
 
   useEffect(() => {
     const tl = gsap.timeline({ defaults: { ease: 'power1.easeInOut' } });
-    tl.to(header.current.children, { duration: 1, autoAlpha: 1, stagger: 0.1 });
+    tl.to(header.current.children, { duration: 1, autoAlpha: 1, stagger: 0.08 });
   }, []);
   return (
     <StyledH1 mainPage={mainPage} ref={header}>

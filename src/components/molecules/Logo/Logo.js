@@ -58,8 +58,8 @@ const Logo = () => {
     tl.to(logoWrapper.current, { duration: 0, visibility: 'visible' })
       .to(letterM, { duration: 1, scale: 1, autoAlpha: 1 })
       .to(letterP, { duration: 1, scale: 1, autoAlpha: 1 }, '-=0.5')
-      .to(circle, { duration: 2, scale: 1, autoAlpha: 1 })
-      .to(border, { duration: 2, scale: 1, autoAlpha: 1 }, '-=2')
+      .to(circle, { duration: 1.5, scale: 1, autoAlpha: 1 })
+      .to(border, { duration: 1.5, scale: 1, autoAlpha: 1 }, '-=1.5')
       .fromTo(cracks, { scale: 0.9 }, { duration: 0.001, scale: 1, autoAlpha: 1 });
   }, []);
   return (

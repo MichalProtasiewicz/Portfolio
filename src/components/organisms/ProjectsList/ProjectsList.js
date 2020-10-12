@@ -30,7 +30,7 @@ const Wrapper = styled.div`
 const ProjectsList = () => {
   const wrapper = useRef(null);
   useEffect(() => {
-    const tl = gsap.timeline({ delay: 1.3, defaults: { ease: 'power4.easeOut' } });
+    const tl = gsap.timeline({ delay: 1, defaults: { ease: 'power4.easeOut' } });
     tl.fromTo(
       wrapper.current.children,
       { autoAlpha: 0, x:50},
