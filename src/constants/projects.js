@@ -1,4 +1,5 @@
 import spizarkaImage from 'assets/screenshots/spizarka.jpg';
+import pokedexImage from 'assets/screenshots/pokedex.jpg';
 import healerSymulatorImage from 'assets/screenshots/healerSymulator.jpg';
 import galeryImage from 'assets/screenshots/galery.jpg';
 import architectImage from 'assets/screenshots/architect.jpg';
@@ -17,6 +18,13 @@ export const projects = [
     photo: spizarkaImage,
     codeLink: 'https://github.com/MichalProtasiewicz/Spizarka',
     liveLink: 'https://spizarkaa.herokuapp.com',
+  },
+  {
+    title: 'Pokedex',
+    description: 'React application with pokeapi.co data, used TypeScript and Redux.',
+    photo: pokedexImage,
+    codeLink: 'https://github.com/MichalProtasiewicz/pokedex',
+    liveLink: 'https://pookedex.herokuapp.com/',
   },
   {
     title: 'Healer Symulator',
@@ -53,7 +61,7 @@ export const projects = [
   {
     title: 'Forest fire simulation',
     description:
-      'The main app\'s goal is to determine how forest fires develop in different manners under specific conditions.',
+      "The main app's goal is to determine how forest fires develop in different manners under specific conditions.",
     photo: fireSimulationImage,
     codeLink: 'https://github.com/MichalProtasiewicz/SymulacjaPozaruLasu',
     liveLink: '',
